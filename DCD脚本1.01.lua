@@ -1,1 +1,4938 @@
-local+CoreGui+%3d+game%3aGetService(%22StarterGui%22)%0a%0aCoreGui%3aSetCore(%22SendNotification%22%2c+%7b%0a++++Title+%3d+%22%e7%a1%ae%e8%ae%a4%e8%ba%ab%e4%bb%bd%22%2c%0a++++Text+%3d+%22%e6%ad%a3%e5%9c%a8%e9%aa%8c%e8%af%81....%22%2c%0a++++Duration+%3d+3%2c+%0a%7d)%0a%0alocal+a%3dtostring(game.Players.LocalPlayer.Character)%3b%0a%0aif+a%3d%3d%22FEAcasm%22then++++++++%0a_G.she%3dtrue%0aelseif+a%3d%3d%22nsjxjcn%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22catwithfiv%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22sjqgduf2%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22reretwyv%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22cat%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22DT_1x1x1x1x1%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22%e6%97%a0%e5%90%8d%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22%e6%97%a0%e5%90%8d%22then%0a_G.she%3dtrue%0aelseif+a%3d%3d%22098765dd4%22then%0a_G.she%3dtrue%0aend%0aif+_G.she%3d%3dtrue+then%0a++++local+CoreGui+%3d+game%3aGetService(%22StarterGui%22)%0a%0aCoreGui%3aSetCore(%22SendNotification%22%2c+%7b%0a++++Title+%3d+%22%e9%aa%8c%e8%af%81%e7%bb%93%e6%9e%9c%22%2c%0a++++Text+%3d+a..%22%e9%aa%8c%e8%af%81%e8%ba%ab%e4%bb%bd%e6%88%90%e5%8a%9f%22%2c%0a++++Duration+%3d+5%2c%0a%7d)%0a%0await(3.5)%0a%0alocal+OrionLib+%3d+loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fFUEx0f3G%22))()%0alocal+LBLG+%3d+Instance.new(%22ScreenGui%22%2c+getParent)%0alocal+LBL+%3d+Instance.new(%22TextLabel%22%2c+getParent)%0alocal+player+%3d+game.Players.LocalPlayer%0a%0aLBLG.Name+%3d+%22LBLG%22%0aLBLG.Parent+%3d+game.CoreGui%0aLBLG.ZIndexBehavior+%3d+Enum.ZIndexBehavior.Sibling%0aLBLG.Enabled+%3d+true%0aLBL.Name+%3d+%22LBL%22%0aLBL.Parent+%3d+LBLG%0aLBL.BackgroundColor3+%3d+Color3.new(1%2c+1%2c+1)%0aLBL.BackgroundTransparency+%3d+1%0aLBL.BorderColor3+%3d+Color3.new(0%2c+0%2c+0)%0aLBL.Position+%3d+UDim2.new(0.75%2c0%2c0.010%2c0)%0aLBL.Size+%3d+UDim2.new(0%2c+133%2c+0%2c+30)%0aLBL.Font+%3d+Enum.Font.GothamSemibold%0aLBL.Text+%3d+%22TextLabel%22%0aLBL.TextColor3+%3d+Color3.new(1%2c+1%2c+1)%0aLBL.TextScaled+%3d+true%0aLBL.TextSize+%3d+14%0aLBL.TextWrapped+%3d+true%0aLBL.Visible+%3d+true%0a%0alocal+FpsLabel+%3d+LBL%0alocal+Heartbeat+%3d+game%3aGetService(%22RunService%22).Heartbeat%0alocal+LastIteration%2c+Start%0alocal+FrameUpdateTable+%3d+%7b+%7d%0a%0alocal+function+HeartbeatUpdate()%0a%09LastIteration+%3d+tick()%0a%09for+Index+%3d+%23FrameUpdateTable%2c+1%2c+-1+do%0a%09%09FrameUpdateTable%5bIndex+%2b+1%5d+%3d+(FrameUpdateTable%5bIndex%5d+%3e%3d+LastIteration+-+1)+and+FrameUpdateTable%5bIndex%5d+or+nil%0a%09end%0a%09FrameUpdateTable%5b1%5d+%3d+LastIteration%0a%09local+CurrentFPS+%3d+(tick()+-+Start+%3e%3d+1+and+%23FrameUpdateTable)+or+(%23FrameUpdateTable+%2f+(tick()+-+Start))%0a%09CurrentFPS+%3d+CurrentFPS+-+CurrentFPS+%25+1%0a%09FpsLabel.Text+%3d+(%22%e5%8c%97%e4%ba%ac%e6%97%b6%e9%97%b4%3a%22..os.date(%22%25H%22)..%22%e6%97%b6%22..os.date(%22%25M%22)..%22%e5%88%86%22..os.date(%22%25S%22))%0aend%0aStart+%3d+tick()%0aHeartbeat%3aConnect(HeartbeatUpdate)%0alocal+Window+%3d+OrionLib%3aMakeWindow(%7bName+%3d+%22%e5%b0%8f%e8%be%be%e4%b8%ad%e5%bf%83%22%2c+HidePremium+%3d+false%2c+SaveConfig+%3d+true%2cIntroText+%3d+%22%e5%b0%8f%e8%be%be%e8%84%9a%e6%9c%ac%22%2c+ConfigFolder+%3d+%22%e5%b0%8f%e8%be%be%e8%84%9a%e6%9c%ac%22%7d)%0agame%3aGetService(%22StarterGui%22)%3aSetCore(%22SendNotification%22%2c%7b+Title+%3d+%22%e5%b0%8f%e8%be%be%e8%84%9a%e6%9c%ac%22%3b+Text+%3d%22%e5%b0%8f%e8%be%be%e8%84%9a%e6%9c%ac%22%3b+Duration+%3d+4%3b+%7d)%0a%0alocal+about+%3d+Window%3aMakeTab(%7b%0a++++Name+%3d+%22%e5%b0%8f%e8%be%be%e5%88%b6%e4%bd%9c%22%2c%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a++++PremiumOnly+%3d+false%0a%7d)%0a%0aabout%3aAddParagraph(%22%e8%84%9a%e6%9c%ac%e4%b8%ba%e6%94%b6%e8%b4%b9%e8%84%9a%e6%9c%ac+%e8%af%b7%e5%8b%bf%e5%8e%bb%e4%ba%8c%e6%94%b9%22)%0aabout%3aAddParagraph(%22%e7%a6%81%e6%ad%a2%e8%a2%ab%e5%9c%88%22)%0a%0alocal+Tab+%3dWindow%3aMakeTab(%7b%0a%09Name+%3d+%22%e5%85%ac%e5%91%8a%22%2c%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%09PremiumOnly+%3d+false%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%09Name+%3d+%22%e5%a4%8d%e5%88%b6%e4%bd%9c%e8%80%85QQ%22%2c%0a%09Callback+%3d+function()%0a+++++setclipboard(%22sjqgduf2%22)%0a++%09end%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%09Name+%3d+%22%e5%a4%8d%e5%88%b6QQ%e7%be%a4%22%2c%0a%09Callback+%3d+function()%0a+++++setclipboard(%22809565207%22)%0a++%09end%0a%7d)%0a%0aOrionLib%3aMakeNotification(%7b%0a%09Name+%3d+%22%e5%b0%8f%e8%be%be%e8%84%9a%e6%9c%ac%22%2c%0a%09Content+%3d+%22%e6%ac%a2%e8%bf%8e%e4%bd%bf%e7%94%a8%e5%b0%8f%e8%be%be%e8%84%9a%e6%9c%ac%22%2c%0a%09Image+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%09Time+%3d+2%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e9%99%88%e8%84%9a%e6%9c%acDOORS2.0%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%97%a82.0%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c34%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c89%5c83%5c108%5c111%5c110%5c47%5c82%5c65%5c87%5c45%5c46%5c46%5c97%5c45%5c115%5c99%5c114%5c105%5c112%5c116%5c47%5c109%5c97%5c105%5c110%5c47%5c37%5c69%5c57%5c37%5c57%5c57%5c37%5c56%5c56%5c68%5c79%5c79%5c82%5c83%5c50%5c46%5c48%5c77%5c79%5c79%5c78%5c37%5c69%5c54%5c37%5c66%5c55%5c37%5c66%5c55%5c37%5c69%5c54%5c37%5c66%5c55%5c37%5c56%5c54%5c34%5c41%5c41%5c40%5c41%22)()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e7%8e%a9%e5%ae%b6%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0alocal+Section+%3d+Tab%3aAddSection(%7b%0a%0a%09Name+%3d+%22%e6%ac%a2%e8%bf%8e%e6%ac%a2%e8%bf%8e%e7%8e%a9%e5%ae%b6%22%0a%0a%7d)%0a%0aTab%3aAddSlider(%7b%0a%0a%09Name+%3d+%22%e9%80%9f%e5%ba%a6%22%2c%0a%0a%09Min+%3d+16%2c%0a%0a%09Max+%3d+200%2c%0a%0a%09Default+%3d+16%2c%0a%0a%09Color+%3d+Color3.fromRGB(255%2c255%2c255)%2c%0a%0a%09Increment+%3d+1%2c%0a%0a%09ValueName+%3d+%22%e6%95%b0%e5%80%bc%22%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.WalkSpeed+%3d+Value%0a%0a%09end++++%0a%0a%7d)%0a%0aTab%3aAddSlider(%7b%0a%0a%09Name+%3d+%22%e8%b7%b3%e8%b7%83%e9%ab%98%e5%ba%a6%22%2c%0a%0a%09Min+%3d+50%2c%0a%0a%09Max+%3d+200%2c%0a%0a%09Default+%3d+50%2c%0a%0a%09Color+%3d+Color3.fromRGB(255%2c255%2c255)%2c%0a%0a%09Increment+%3d+1%2c%0a%0a%09ValueName+%3d+%22%e6%95%b0%e5%80%bc%22%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.JumpPower+%3d+Value%0a%0a%09end++++%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e8%b7%b3%e8%b7%83%e9%ab%98%e5%ba%a6%e8%ae%be%e7%bd%ae%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.JumpPower+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e7%a7%bb%e5%8a%a8%e9%80%9f%e5%ba%a6%e8%ae%be%e7%bd%ae%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.WalkSpeed+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e9%87%8d%e5%8a%9b%e8%ae%be%e7%bd%ae%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Workspace.Gravity+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddToggle(%7b%0a%0a%09Name+%3d+%22%e5%a4%9c%e8%a7%86%22%2c%0a%0a%09Default+%3d+false%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09if+Value+then%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(1%2c+1%2c+1)%0a%0a%09%09else%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(0%2c+0%2c+0)%0a%0a%09%09end%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%a1%8cV3%ef%bc%88%e9%9a%90%e8%97%8f%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fU27yQRxS%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%9b%bf%e8%ba%ab%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fSkrillexMe%2fSkrillexLoader%2fmain%2fSkrillexLoadMain%27)))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%88%ac%e5%a2%99%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fzXk4Rq2r%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%85%89%e5%bd%b1V4%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMZEEN2424%2fGraphics%2fmain%2fGraphics.xml%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8f%98%e6%88%90%e8%9b%87%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fpastefy.ga%2ftWBTcE4R%2fraw%27)%2ctrue))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%ae%a9%e5%88%ab%e8%ae%a9%e5%88%ab%e4%ba%ba%e6%8e%a7%e5%88%b6%e8%87%aa%e5%b7%b1%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fpastefy.ga%2fa7RTi4un%2fraw%27)%2ctrue))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%82%b9%e5%87%bb%e4%bc%a0%e9%80%81%e5%b7%a5%e5%85%b7%22%2c%0a%0a%09Callback+%3d+function()%0a%0amouse+%3d+game.Players.LocalPlayer%3aGetMouse()+tool+%3d+Instance.new(%22Tool%22)+tool.RequiresHandle+%3d+false+tool.Name+%3d+%22%5bFE%5d+TELEPORT+TOOL%22+tool.Activated%3aconnect(function()+local+pos+%3d+mouse.Hit%2bVector3.new(0%2c2.5%2c0)+pos+%3d+CFrame.new(pos.X%2cpos.Y%2cpos.Z)+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+pos+end)+tool.Parent+%3d+game.Players.LocalPlayer.Backpack%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%85%a8(%e8%8b%b1%e6%96%87%f0%9f%98%ad)%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fkEq7bdf9%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%9c%b0%e5%b2%a9%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c34%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c98%5c98%5c97%5c109%5c120%5c98%5c98%5c97%5c109%5c120%5c98%5c98%5c97%5c109%5c120%5c47%5c99%5c111%5c100%5c101%5c115%5c112%5c97%5c99%5c101%5c115%5c45%5c98%5c108%5c97%5c110%5c107%5c47%5c109%5c97%5c105%5c110%5c47%5c37%5c69%5c55%5c37%5c57%5c57%5c37%5c66%5c68%5c34%5c41%5c41%5c40%5c41%22)()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22dx%e6%97%a7%e7%89%88%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fDXuwu%2ftest-lol%2fmain%2fYO.lua%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c112%5c97%5c115%5c116%5c101%5c98%5c105%5c110%5c46%5c99%5c111%5c109%5c47%5c114%5c97%5c119%5c47%5c103%5c101%5c109%5c120%5c72%5c119%5c65%5c49%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%97%a0%e6%95%8c%22%2c%0a%0a%09Callback+%3d+function()%0a%0alocal+lp+%3d+game%3aGetService+%22Players%22.LocalPlayer%0a%0aif+lp.Character%3aFindFirstChild+%22Head%22+then%0a%0a++++local+char+%3d+lp.Character%0a%0a++++char.Archivable+%3d+true%0a%0a++++local+new+%3d+char%3aClone()%0a%0a++++new.Parent+%3d+workspace%0a%0a++++lp.Character+%3d+new%0a%0a++++wait(2)%0a%0a++++local+oldhum+%3d+char%3aFindFirstChildWhichIsA+%22Humanoid%22%0a%0a++++local+newhum+%3d+oldhum%3aClone()%0a%0a++++newhum.Parent+%3d+char%0a%0a++++newhum.RequiresNeck+%3d+false%0a%0a++++oldhum.Parent+%3d+nil%0a%0a++++wait(2)%0a%0a++++lp.Character+%3d+char%0a%0a++++new%3aDestroy()%0a%0a++++wait(1)%0a%0a++++newhum%3aGetPropertyChangedSignal(%22Health%22)%3aConnect(%0a%0a++++++++function()%0a%0a++++++++++++if+newhum.Health+%3c%3d+0+then%0a%0a++++++++++++++++oldhum.Parent+%3d+lp.Character%0a%0a++++++++++++++++wait(1)%0a%0a++++++++++++++++oldhum%3aDestroy()%0a%0a++++++++++++end%0a%0a++++++++end)%0a%0a++++workspace.CurrentCamera.CameraSubject+%3d+char%0a%0a++++if+char%3aFindFirstChild+%22Animate%22+then%0a%0a++++++++char.Animate.Disabled+%3d+true%0a%0a++++++++wait(.1)%0a%0a++++++++char.Animate.Disabled+%3d+false%0a%0a++++end%0a%0a++++lp.Character%3aFindFirstChild+%22Head%22%3aDestroy()%0a%0aend%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%94%a9%e9%a3%9e%e5%88%ab%e4%ba%ba%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fGnvPVBEi%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%98%b2%e6%ad%a2%e6%8e%89%e7%ba%bf%ef%bc%88%e5%8f%8d%e6%8c%82%e6%9c%ba%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09print(%22Anti+Afk+On%22)%0a%0a%09%09local+vu+%3d+game%3aGetService(%22VirtualUser%22)%0a%0a%09%09game%3aGetService(%22Players%22).LocalPlayer.Idled%3aconnect(function()%0a%0a%09%09+++vu%3aButton2Down(Vector2.new(0%2c0)%2cworkspace.CurrentCamera.CFrame)%0a%0a%09%09+++wait(1)%0a%0a%09%09+++vu%3aButton2Up(Vector2.new(0%2c0)%2cworkspace.CurrentCamera.CFrame)%0a%0a%09%09end)%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%80%8f%e8%a7%86%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fMA8jhPWT%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%90%b8%e5%8f%96%e5%85%a8%e9%83%a8%e7%8e%a9%e5%ae%b6%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fhQSBGsw2%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%ba%ba%e7%89%a9%e6%97%a0%e6%95%8c%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fH3RLCWWZ%27))()%0a%0a%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9a%90%e8%ba%ab(E)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09+loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fnwGEvkez%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%94%b5%e8%84%91%e9%94%ae%e7%9b%98%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fadvxzivhsjjdhxhsidifvsh%2fmobkeyboard%2fmain%2fmain.txt%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%bd%a6(E)(%e5%88%ab%e4%ba%ba%e7%9c%8b%e5%88%b0)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fG3GnBCyC%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e8%b7%b3%e8%b7%83%e9%ab%98%e5%ba%a6%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.JumpPower+%3d+Value%0a%0a%09end%09+%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e9%87%8d%e5%8a%9b%e8%ae%be%e7%bd%ae%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Workspace.Gravity+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddToggle(%7b%0a%0a%09Name+%3d+%22%e7%a9%bf%e5%a2%992%22%2c%0a%0a%09Default+%3d+false%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09if+Value+then%0a%0a%09%09++++Noclip+%3d+true%0a%0a%09%09++++Stepped+%3d+game.RunService.Stepped%3aConnect(function()%0a%0a%09%09%09++++if+Noclip+%3d%3d+true+then%0a%0a%09%09%09%09++++for+a%2c+b+in+pairs(game.Workspace%3aGetChildren())+do%0a%0a++++++++++++++++++++++++if+b.Name+%3d%3d+game.Players.LocalPlayer.Name+then%0a%0a++++++++++++++++++++++++++++for+i%2c+v+in+pairs(game.Workspace%5bgame.Players.LocalPlayer.Name%5d%3aGetChildren())+do%0a%0a++++++++++++++++++++++++++++++++if+v%3aIsA(%22BasePart%22)+then%0a%0a++++++++++++++++++++++++++++++++++++v.CanCollide+%3d+false%0a%0a++++++++++++++++++++++++++++++++end%0a%0a++++++++++++++++++++++++++++end%0a%0a++++++++++++++++++++++++end%0a%0a++++++++++++++++++++end%0a%0a%09%09%09++++else%0a%0a%09%09%09%09++++Stepped%3aDisconnect()%0a%0a%09%09%09++++end%0a%0a%09%09++++end)%0a%0a%09++++else%0a%0a%09%09++++Noclip+%3d+false%0a%0a%09++++end%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddToggle(%7b%0a%0a%09Name+%3d+%22%e5%a4%9c%e8%a7%86%22%2c%0a%0a%09Default+%3d+false%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09if+Value+then%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(1%2c+1%2c+1)%0a%0a%09%09else%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(0%2c+0%2c+0)%0a%0a%09%09end%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%bc%a0%e6%a0%87%ef%bc%88%e6%89%8b%e6%9c%ba%e9%9d%9e%e5%b8%b8%e4%b8%8d%e5%bb%ba%e8%ae%ae%e7%94%a8%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fpastefy.ga%2fV75mqzaz%2fraw%27)%2ctrue))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%a1%8c%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fU27yQRxS%27))()%0a%0a%09end+%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%b7%9f%e8%b8%aa%e7%8e%a9%e5%ae%b6%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++++%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fF9PNLcXk%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bc%aa%e5%90%8d%e8%af%b4%e8%af%9d%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fpastefy.ga%2fzCFEwaYq%2fraw%27)%2ctrue))()%0a%0a%09end+%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%b8%8f%e7%a9%ba%e8%a1%8c%e8%b5%b0%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fGhostPlayer352%2fTest4%2fmain%2fFloat%27))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%80%8f%e8%a7%86%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aGetObjects(%22rbxassetid%3a%2f%2f10092697033%22)%5b1%5d.Source)()%0a%0a%09end+%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%bd%ac%e8%b5%b7%e6%9d%a5%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++++%09loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fr97d7dS0%27%2c+true))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9a%90%e8%ba%ab(E)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09+loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fnwGEvkez%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e7%ab%8b%e5%8d%b3%e6%ad%bb%e4%ba%a1%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++game.Players.LocalPlayer.Character.Humanoid.Health%3d0%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%bb%91%e5%ae%a2%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3a+HttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fBirthScripts%2fScripts%2fmain%2fc00l.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%ae%a1%e7%90%86%e5%91%98%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3a+HttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fiK4oS%2fbackdoor.exe%2fmaster%2fsource.lua%27)%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e5%9b%9e%e6%bb%a1%e8%a1%80%e5%90%8e%e5%88%86%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%8f%af%e8%83%bd%e4%b8%8d%e5%8f%af%e4%bb%a5%e8%83%bd%e7%94%a8%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++game.Players.LocalPlayer.Character.Humanoid.Health%3d10000%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%94%ae%e7%9b%98%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fadvxzivhsjjdhxhsidifvsh%2fmobkeyboard%2fmain%2fmain.txt%22%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e7%8e%a9%e5%ae%b6%e5%8a%a8%e4%bd%9c%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++getgenv().she%3d%22%e4%bd%9c%e8%80%85%e5%b0%8f%e7%9b%9b%e8%93%9d%e5%85%8d%e8%b4%b9%e8%af%b7%e5%8b%bf%e5%80%92%e5%8d%96%22%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fZj4NnKs6%22))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22doors%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22DX%e5%a4%9c%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fDXuwu%2ftest-lol%2fmain%2fYO.lua%22))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fGamingScripter%2fDarkrai-X%2fmain%2fGames%2fDoors%22))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%b6%85%e7%ba%a7%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3a+HttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fFazedrab%2fEntitySpawner%2fmain%2fdoors(orionlib).lua%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bf%ae%e6%94%b9%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet%22https%3a%2f%2fraw.githubusercontent.com%2fsponguss%2fDoors-Entity-Replicator%2fmain%2fsource.lua%22)()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e5%be%ae%e5%b1%b1doors%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++--%e5%be%ae%e5%b1%b1doors+2.3.2(%e6%84%9a%e4%ba%ba%e8%8a%82%e5%bf%ab%e4%b9%90)%0a%0aloadstring(game%3aHttpGet(%22%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c112%5c97%5c115%5c116%5c101%5c98%5c105%5c110%5c46%5c99%5c111%5c109%5c47%5c114%5c97%5c119%5c47%5c117%5c72%5c72%5c112%5c56%5c102%5c122%5c83%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22ms%e8%a6%81%e7%99%bd%e5%90%8d%e5%8d%95%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fzoophiliaphobic%2fPOOPDOORS%2fmain%2fscript.lua%27))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e6%88%91%e7%9a%84%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fQsCas0t3%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e4%ba%91doors%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fXiaoYunCN%2fEntitySpawner%2fmain%2fdoors(orionlib).lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%9c%80%e4%b8%8d%e5%bc%ba%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet((%27https%3a%2f%2fpastebin.com%2fraw%2fR8QMbhzv%27)))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e7%99%bd%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++_G%5b%22%e7%99%bd%e8%84%9a%e6%9c%ac%e4%bd%9c%e8%80%85%e4%bf%ae%e7%8b%97%22%5d%3d%22xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey%22loadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fwev666666%2fbaijiaobengV2.0beta%2fmain%2f%25E7%2599%25BD%25E8%2584%259A%25E6%259C%25ACbeta%27)%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e5%bf%8d%e8%80%85%e4%bc%a0%e5%a5%87%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e6%93%8d%e4%bd%a0%e5%a6%88%e4%b8%8d%e7%9f%a5%e9%81%93%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fscriptpastebin%2fraw%2fmain%2f1%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%bf%8d%e8%80%85%e4%bc%a0%e5%a5%87%22%2c%0a%0a%09Callback+%3d+function()%0a%0apcall(loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2f2UjrXwTV%22)))%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e4%b8%8d%e7%9f%a5%e9%81%93%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fharisiskandar178%2f5repo%2fmain%2fscript4.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e6%9e%81%e9%80%9f%e4%bc%a0%e5%a5%87%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e9%9d%92%e8%84%9a%e6%9c%ac%22%2c%0a%0a++++Callback%3dfunction()%0a%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fkkaaccnnbb%2fmoney%2fmain%2ffix%27))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%ba%8c%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c98%5c111%5c121%5c115%5c99%5c112%5c47%5c98%5c101%5c116%5c97%5c47%5c109%5c97%5c105%5c110%5c47%5c37%5c69%5c57%5c37%5c56%5c48%5c37%5c57%5c70%5c37%5c69%5c53%5c37%5c66%5c65%5c37%5c65%5c54%5c37%5c69%5c55%5c37%5c56%5c50%5c37%5c66%5c56%5c37%5c69%5c56%5c37%5c66%5c53%5c37%5c66%5c55%5c46%5c108%5c117%5c97%27))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fTrixAde%2fProxima-Hub%2fmain%2fMain.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%89%91%e5%ae%a2v3%e2%80%94%e2%80%94roblox%e5%8a%a0%e5%85%a5%e7%be%a4%e4%b8%bb%e5%89%91%e5%ae%a2%e6%89%8d%e5%8f%af%e7%94%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0ajianke_V3+%3d+%22%e4%bd%9c%e8%80%85_%e5%88%9d%e5%a4%8f%22jianke+%3d+%22%e5%89%91%e5%ae%a2QQ%e7%be%a4347724155%22loadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fjiankeQWQ%2fjiankeV3%2fmain%2fjianke_V3%27)))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e9%b2%a8%e5%8f%a3%e6%b1%82%e7%94%9f2%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddDropdown(%7b%0a%0a%09Name+%3d+%22%e5%85%8d%e8%b4%b9%e8%88%b9%e5%8f%aa%22%2c%0a%0a%09Default+%3d+%221%22%2c%0a%0a%09Options+%3d+%7b%22DuckyBoatBeta%22%2c+%22DuckyBoat%22%2c+%22BlueCanopyMotorboat%22%2c+%22BlueWoodenMotorboat%22%2c+%22UnicornBoat%22%2c+%22Jetski%22%2c+%22RedMarlin%22%2c+%22Sloop%22%2c+%22TugBoat%22%2c+%22SmallDinghyMotorboat%22%2c+%22JetskiDonut%22%2c+%22Marlin%22%2c+%22TubeBoat%22%2c+%22FishingBoat%22%2c+%22VikingShip%22%2c+%22SmallWoodenSailboat%22%2c+%22RedCanopyMotorboat%22%2c+%22Catamaran%22%2c+%22CombatBoat%22%2c+%22TourBoat%22%2c+%22Duckmarine%22%2c+%22PartyBoat%22%2c+%22MilitarySubmarine%22%2c++%22GingerbreadSteamBoat%22%2c+%22Sleigh2022%22%2c+%22Snowmobile%22%2c+%22CruiseShip%22%7d%2c%0a%0a%09Callback+%3d+function(Value)%0a%0alocal+ohString1+%3d+(Value)%0a%0agame%3aGetService(%22ReplicatedStorage%22).EventsFolder.BoatSelection.UpdateHostBoat%3aFireServer(ohString1)%0a%0a%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e6%9d%80%e9%b2%a8%e9%b1%bc%f0%9f%a6%88%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fSw1ndlerScripts%2fRobloxScripts%2fmain%2fMisc%2520Scripts%2fsharkbite2.lua%22%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e8%83%bd%e9%87%8f%e7%aa%81%e5%87%bb%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%83%bd%e9%87%8f%e7%aa%81%e5%87%bb%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fHarley-HUB%2fEnergy-Assault%2fmain%2fEne%22%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e6%b1%bd%e8%bd%a6%e7%bb%8f%e9%94%80%e5%a4%a7%e4%ba%a8%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%8b%b1%e6%96%87%e7%89%88%22%2c%0a%0a%09Callback+%3d+function()%0a%0apcall(function()%0a++++repeat+wait()+until+game%3aIsLoaded()%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2f03sAlt%2fBlueLockSeason2%2fmain%2fREADME.md%22))()%0aend)%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22FE%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22C00lgui%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aGetObjects(%22rbxassetid%3a%2f%2f8127297852%22)%5b1%5d.Source)()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%221x1x1x1%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet((%27https%3a%2f%2fpastebin.com%2fraw%2fJipYNCht%27)%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%a8%e7%94%bb%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fGamingScripter%2fAnimation-Hub%2fmain%2fAnimation%2520Gui%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%b9%bd%e7%81%b5%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fGhostPlayer352%2fTest4%2fmain%2fGhostHub%27))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%9c%98%e8%9b%9b%e4%be%a0%e7%88%ac%e5%a2%99%e9%85%8d%e5%90%88%e9%94%ae%e7%9b%98%e8%84%9a%e6%9c%ac%e6%8c%89c%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fpastebin.com%2fraw%2f2X0hKUgq%27)%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%93%81%e6%8b%b3%e6%89%93%e6%ad%bb%e4%bd%a0%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2f0Ben1%2ffe%2fmain%2fobf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt%27)%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%a3%b0%e9%9f%b3%e6%92%ad%e6%94%be%e5%99%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fGEianeKX%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22NA%e7%ae%a1%e7%90%86%e5%91%98%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fFilteringEnabled%2fNamelessAdmin%2fmain%2fSource%22))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22By%e6%89%8b%e8%85%95%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%8e%b0%e6%89%8b%e8%85%95%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fapi.luarmor.net%2ffiles%2fv3%2floaders%2f99d16edc79729a038994f85ce7335971.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac2%e2%80%94%e2%80%94Key%3aScriptJezz%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fZhenX201%2fFE-Infinite-Money-All-Stats%2fmain%2fsource%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%97%a0%e5%8d%a1%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fKrzysztofHub%2fscript%2fmain%2floader.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%97%a0%e5%8d%a1%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fzicus-scripts%2fSkullHub%2fmain%2fLoader.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%97%a0%e5%8d%a1%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fLOLking123456%2fwrestle2%2fmain%2farmsim%22))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e5%8a%9b%e9%87%8f%e4%bc%a0%e5%a5%87%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e4%bf%ae%e6%94%b9%e5%8a%9b%e9%87%8f%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fjynzl%2fmain%2fmain%2fMusclas%2520Legenos.lua%27))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%9b%e9%87%8f%e4%bc%a0%e5%a5%87Muscle+Legend%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fharisiskandar178%2fRoblox-Script%2fmain%2fMuscle%2520Legend%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e5%8a%9b%e9%87%8f%e4%bc%a0%e5%a5%87%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aGetObjects(%22rbxassetid%3a%2f%2f10048914323%22)%5b1%5d.Source)()%0a%0a++++end%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%9d%af%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fzuohongjian%2fbjb%2fmain%2fllcq%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%89%91%e5%ae%a2v3%e2%80%94%e2%80%94roblox%e5%8a%a0%e5%85%a5%e7%be%a4%e7%bb%84%e5%89%91%e5%ae%a2%e6%89%8d%e5%8f%af%e7%94%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0ajianke_V3+%3d+%22%e4%bd%9c%e8%80%85_%e5%88%9d%e5%a4%8f%22jianke+%3d+%22%e5%89%91%e5%ae%a2QQ%e7%be%a4347724155%22loadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fjiankeQWQ%2fjiankeV3%2fmain%2fjianke_V3%27)))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e5%bd%a9%e8%99%b9%e6%9c%8b%e5%8f%8b%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e5%bd%a9%e8%99%b9%e6%9c%8b%e5%8f%8b%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fSempiller%2fRainbowTool%2fmain%2fTurkish.lua%27))()%3b%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%bd%a9%e8%99%b9%e6%9c%8b%e5%8f%8b2%22%2c%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fJNHHGaming%2fRainbow-Friends%2fmain%2fRainbow%2520Friends%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%a8%a1%e4%bb%bf%e8%80%85%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fttjy9808%2fTHEMIMICNEWMOBILEUINOTBETA%2fmain%2fREADME.md%22))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e6%8c%82%e5%b7%a5%e5%8e%82%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%89%91%e5%ae%a2v3%e2%80%94%e2%80%94roblox%e5%8a%a0%e5%85%a5%e7%be%a4%e7%bb%84%e5%89%91%e5%ae%a2%e6%89%8d%e5%8f%af%e7%94%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0ajianke_V3+%3d+%22%e4%bd%9c%e8%80%85_%e5%88%9d%e5%a4%8f%22jianke+%3d+%22%e5%89%91%e5%ae%a2QQ%e7%be%a4347724155%22loadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fjiankeQWQ%2fjiankeV3%2fmain%2fjianke_V3%27)))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%85%b5%e5%b7%a5%e5%8e%82%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fRandomAdamYT%2fDarkHub%2fmaster%2fInit%27)%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%b0%b4%e4%b8%8b%e4%b8%96%e7%95%8c_%e7%99%bd%e5%90%8d%e5%8d%95%e5%b7%b2%e8%a2%ab%e7%a0%b4%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fjiankeQWQ%2fFish%2fmain%2fsx%27)))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e5%a4%a7%e9%97%b9%e7%9b%91%e7%8b%b1%ef%bc%88%e7%9b%91%e7%8b%b1%e4%ba%ba%e7%94%9f%ef%bc%89%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%bf%87%e4%ba%8e%e7%89%9b%e9%80%bc%ef%bc%8c%e8%b0%81%e7%94%a8%e8%b0%81%e5%ad%a4%e5%84%bf%e7%9a%84%e7%ae%a1%e7%90%86%e5%91%98%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fH17S32%2fTiger_Admin%2fmain%2fScript%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%96%b0%e8%8f%9c%e5%8d%95%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fLiverMods%2fxRawnder%2fmain%2fHubMoblie%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22v1.3%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fDenverrz%2fscripts%2fmaster%2fPRISONWARE_v1.3.txt%22))()%3b%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e6%88%98%e4%ba%89%e5%a4%a7%e4%ba%a8%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac1%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fufouzzed%2fWarTycoon%2fmain%2fByJMaxeyy%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%ba%8c%22%2c%0a%0a%09Callback+%3d+function()%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fToraIsMe%2fToraIsMe%2fmain%2f0wartycoon%22%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fNivex123456%2fWar-Tycoon%2fmain%2fScript%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%89%91%e5%ae%a2v3%e2%80%94%e2%80%94roblox%e5%8a%a0%e5%85%a5%e7%be%a4%e7%bb%84%e5%89%91%e5%ae%a2%e6%89%8d%e5%8f%af%e7%94%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0ajianke_V3+%3d+%22%e4%bd%9c%e8%80%85_%e5%88%9d%e5%a4%8f%22jianke+%3d+%22%e5%89%91%e5%ae%a2QQ%e7%be%a4347724155%22loadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fjiankeQWQ%2fjiankeV3%2fmain%2fjianke_V3%27)))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e8%87%aa%e7%84%b6%e7%81%be%e5%ae%b3%e6%a8%a1%e6%8b%9f%e5%99%a8%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e7%84%b6%e7%81%be%e5%ae%b3%e6%a8%a1%e6%8b%9f%e5%99%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fgist.githubusercontent.com%2fTurkOyuncu99%2f7c75386107937fa006304efd24543ad4%2fraw%2f8d759dfcd95d39949c692735cfdf62baec0bf835%2fcafwetweg%22%2c+true))()+%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e7%84%b6%e7%81%be%e5%ae%b3%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2f9NLK7%2f93qjoadnlaknwldk%2fmain%2fmain%27))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e4%bb%a3%e6%9c%a8%e5%a4%a7%e4%ba%a8%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bc%90%e6%9c%a8%e5%a4%a7%e4%ba%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0a--+Join+to+Discord+%3a+https%3a%2f%2fdiscord.gg%2fnightfallgui%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fgist.githubusercontent.com%2fItsEcstasy%2f327b705029ed89fd1be0f8382b3fb04f%2fraw%2f07c7beb24aebec0a26f4622c92b593428811db4d%2fNightfall1.7-Temp%27))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9d%92%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fkkaaccnnbb%2fmoney%2fmain%2ffix%27))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e5%8a%a8%e6%84%9f%e6%98%9f%e6%9c%9f%e4%ba%94%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22script%e4%b8%80%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fShowerHead-FluxTeam%2fscripts%2fmain%2ffunky-friday-autoplay%27))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e5%90%84%e5%a4%a7%e8%84%9a%e6%9c%ac%22%2c%0a%0a++++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e2%98%81%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fXiaoYunCN%2fLOL%2fmain%2f%25E4%25BA%2591%25E8%2584%259A%25E6%259C%25ACCloud%2520script.lua%22%2c+true))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22XC%e5%8d%a1%e5%af%86%3aw%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++getgenv().XC%3d%22%e4%bd%9c%e8%80%85XC%22%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fPAFzYx0F%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22%e9%be%99%e8%84%9a%e6%9c%ac%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++getgenv().long+%3d+%22%e9%be%99%e8%84%9a%e6%9c%ac%ef%bc%8c%e5%8a%a0%e8%bd%bd%e6%97%b6%e9%97%b4%e9%95%bf%e8%af%b7%e8%80%90%e5%bf%83%22%0a%0aloadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c34%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c108%5c121%5c121%5c97%5c105%5c110%5c105%5c47%5c108%5c111%5c110%5c47%5c109%5c97%5c105%5c110%5c47%5c108%5c105%5c115%5c119%5c109%5c34%5c41%5c41%5c40%5c41%22)()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++Name%3d%22USA%22%2c%0a%0a++++Callback%3dfunction()%0a%0a++++++++getgenv().USA%3d%22%e4%bd%9c%e8%80%85USA%e5%85%8d%e8%b4%b9%e8%af%b7%e5%8b%bf%e5%80%92%e5%8d%96%22%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fboyscp%2fbeta%2fmain%2fUSA.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9d%92%e8%84%9a%e6%9c%ac%e2%80%94%e2%80%94%e6%94%af%e6%8c%81%e5%be%88%e5%a4%9a%e6%b8%b8%e6%88%8f%22%2c%0a%0a%09Callback+%3d+function()%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fkkaaccnnbb%2fmoney%2fmain%2ffix%27))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%a7%8b%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0alocal+SCC_CharPool%3d%7b%0a%5b1%5d%3d+tostring(utf8.char((function()+return+table.unpack(%7b104%2c116%2c116%2c112%2c115%2c58%2c47%2c47%2c114%2c97%2c119%2c46%2c103%2c105%2c116%2c104%2c117%2c98%2c117%2c115%2c101%2c114%2c99%2c111%2c110%2c116%2c101%2c110%2c116%2c46%2c99%2c111%2c109%2c47%2c87%2c83%2c56%2c53%2c55%2c57%2c54%2c48%2c47%2c45%2c47%2c109%2c97%2c105%2c110%2c47%2c37%2c69%2c55%2c37%2c65%2c55%2c37%2c56%2c66%2c37%2c67%2c50%2c37%2c66%2c55%2c37%2c69%2c56%2c37%2c56%2c55%2c37%2c65%2c65%2c37%2c69%2c53%2c37%2c56%2c56%2c37%2c66%2c54%2c37%2c69%2c56%2c37%2c56%2c52%2c37%2c57%2c65%2c37%2c69%2c54%2c37%2c57%2c67%2c37%2c65%2c67%2c37%2c69%2c54%2c37%2c57%2c54%2c37%2c66%2c48%2c37%2c69%2c54%2c37%2c66%2c65%2c37%2c57%2c48%2c37%2c69%2c55%2c37%2c65%2c48%2c37%2c56%2c49%2c46%2c116%2c120%2c116%7d)end)()))%7d%0aloadstring(game%3aHttpGet(SCC_CharPool%5b1%5d))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%86%b0%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fGR4ChWKv%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%89%91%e5%ae%a2v3_roblox%e5%8a%a0%e5%85%a5%e7%be%a4%e7%bb%84%e5%89%91%e5%ae%a2%e6%89%8d%e5%8f%af%e7%94%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0ajianke_V3+%3d+%22%e4%bd%9c%e8%80%85_%e5%88%9d%e5%a4%8f%22jianke+%3d+%22%e5%89%91%e5%ae%a2QQ%e7%be%a4347724155%22loadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fjiankeQWQ%2fjiankeV3%2fmain%2fjianke_V3%27)))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%b2%a8%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fsharksharksharkshark%2fshark-shark-shark-shark-shark%2fmain%2fshark-scriptlollol.txt%22%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%b0%b4%e4%b8%8b%e4%b8%96%e7%95%8c%e6%94%af%e6%8c%81%e5%be%88%e5%a4%9a%e6%b8%b8%e6%88%8f_%e5%90%8d%e5%8d%95%e5%b7%b2%e8%a2%ab%e7%a0%b4%e9%99%a4%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fjiankeQWQ%2fFish%2fmain%2fsx%27)))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%80%80%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fzuohongjian%2fbjb%2fmain%2fbjb%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22EZ+Hub+150%2b%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fdebug420%2fEz-Industries-Launcher-Data%2fmaster%2fLauncher.lua%27)%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%ae%a2%e6%88%b7%e7%ab%af%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fObviouslyOrchi%2fMoonlight_Client.lua%2fmain%2fUniversal%22%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bd%9c%e5%bc%8a%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fmrgunz%2fUnnamedCheat%2fmain%2fLoader%22))()%3b%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%98%bf%e6%96%af%e9%a1%bf%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2frblxscriptsnet%2funfair%2fmain%2frblxhub.lua%27)%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%ad%e5%bf%833%e5%8d%a1%e5%af%86%e2%80%94released%22%2c%0a%0a%09Callback+%3d+function()%0a%0a--+DISCORD%3a+https%3a%2f%2fdiscord.gg%2f8YZMwfYaNqgetgenv().key+%3d+%22JOIN+DISCORD+FOR+KEY%22%3bloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fNer0ox%2fsexy-script-hub%2fmain%2fLoader.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%ad%e5%bf%83%e5%a4%96%e7%bd%91%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fTakeModzz%2fGames-Hub-Script%2fmain%2fGames%2520Hub%2520(Always%2520updated)%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Every+day%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fKATERGaming%2fRoblox%2fmain%2fKaterHub.Lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%a7%bb%e5%8a%a8%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGetAsync(%22https%3a%2f%2fshz.al%2f%7emobile-hub-v2%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%ad%e5%bf%83%e5%8f%a6%e4%b8%80%e7%89%88%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2ffgasfga%2fSCRIPT-HUB%2fmain%2fHello.lua%22%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22140%2b%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2f1201for%2fV.G-Hub%2fmain%2fV.Ghub%27))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22DOORS%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%97%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fgithub.com%2fDocYogurt%2ffree%2fraw%2fmain%2flong%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%b8%8d%e5%9d%a4%e5%88%b0%e4%bb%80%e4%b9%88%e5%90%8d%e5%ad%97%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%22https%3a%2f%2fraw.githubusercontent.com%2fmstudio45%2fpoopdoors_edited%2fmain%2fpoopdoors_edited.lua%22)%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%a9%bf%e5%a2%99(%e6%97%a0%e6%8b%89%e5%9b%9e)%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fgithub.com%2fDXuwu%2fOK%2fraw%2fmain%2fclip%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%89%8b%e7%94%b5%e7%ad%92%ef%bc%88%e6%b2%a1%e7%94%b5%e4%bc%9a%e6%9c%89bug%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fK0t1n%2fPublic%2fmain%2fNormal%2520Flashlight%22))()%0a%0a++++end%0a%0a%7d)+%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%a5%9e%e5%9c%a3%e7%82%b8%e5%bc%b9%ef%bc%88%e6%b8%85%e5%b2%a9%e6%8f%90%e4%be%9b%ef%bc%89%22%2c%0a%0a++++Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fHolyGrenadeByNerd.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++++Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fgist.githubusercontent.com%2fC00LBOZO%2f0c78ad8c74ca26324c87ede16ce8b387%2fraw%2fc0887ac0d24fde80bea11ab1a6a696ec296af272%2fCrucifix%27))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8f%98%e8%ba%ab(%e9%98%bf%e5%b7%b4%e6%80%aa%e6%8f%90%e4%be%9b)%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fChronoAccelerator%2fPublic-Scripts%2fmain%2fMorphing%2fMorphScript.lua%22))()%3b%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%be%ae%e5%b1%b12.3.2(%e4%be%9d%e6%97%a7%e6%98%af%e9%98%bf%e5%b7%b4%e6%80%aa%e6%8f%90%e4%be%9b)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a--%e5%be%ae%e5%b1%b1doors+2.3.2(%e6%84%9a%e4%ba%ba%e8%8a%82%e5%bf%ab%e4%b9%90)%0a%0aloadstring(game%3aHttpGet(%22%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c112%5c97%5c115%5c116%5c101%5c98%5c105%5c110%5c46%5c99%5c111%5c109%5c47%5c114%5c97%5c119%5c47%5c117%5c72%5c72%5c112%5c56%5c102%5c122%5c83%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%a1%8c%22%2c%0a%0a%09%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fgqv7PXAa%22))()%0a%0a%09end%0a%0a%7d)++++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%94%ae%e7%9b%98%22%2c%0a%0a%09%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fadvxzivhsjjdhxhsidifvsh%2fmobkeyboard%2fmain%2fmain.txt%22%2c+true))()%0a%0a%09end%0a%0a%7d)++++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%90%b8%e9%93%81%e7%9f%b3%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fMagnetByNerd.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%89%aa%e5%88%80%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fshears_done.lua%22))()%0a%0a++++end%0a%0a%7d)++++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%bf%80%e5%85%89%e6%9e%aa%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fK0t1n%2fPublic%2fmain%2fLaser%2520Gun%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%83%bd%e9%87%8f%e7%bd%90%ef%bc%88%e6%b8%85%e5%b2%a9%e6%8f%90%e4%be%9b%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fnengliangtiao%22))()%0a%0a++++end%0a%0a%7d)+++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%b4%ab%e8%89%b2%e6%89%8b%e7%94%b5%e7%ad%92%ef%bc%88%e5%9c%a8%e7%94%b5%e6%a2%af%e8%b4%ad%e4%b9%b0%e4%b8%9c%e8%a5%bf%e7%9a%84%e6%97%b6%e5%80%99%e4%bd%bf%e7%94%a8%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fK0t1n%2fPublic%2fmain%2fPurple%2520Flashlight%22))()%0a%0a++++end%0a%0a%7d)++%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9d%92%e8%9b%99%22%2c%0a%0a%09Callback+%3d+function()%0a%0agetgenv().eom+%3d+%22%e9%9d%92%e8%9b%99%22%0a%0aloadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c39%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c112%5c97%5c115%5c116%5c101%5c98%5c105%5c110%5c46%5c99%5c111%5c109%5c47%5c114%5c97%5c119%5c47%5c68%5c122%5c120%5c115%5c81%5c82%5c68%5c85%5c39%5c41%5c41%5c40%5c41%22)()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%9c%b0%e5%b2%a9%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c34%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c98%5c98%5c97%5c109%5c120%5c98%5c98%5c97%5c109%5c120%5c98%5c98%5c97%5c109%5c120%5c47%5c99%5c111%5c100%5c101%5c115%5c112%5c97%5c99%5c101%5c115%5c45%5c98%5c108%5c97%5c110%5c107%5c47%5c109%5c97%5c105%5c110%5c47%5c37%5c69%5c55%5c37%5c57%5c57%5c37%5c66%5c68%5c34%5c41%5c41%5c40%5c41%22)()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22ato%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fatoyayaya%2fjiaoben%2fmain%2fjiamilist%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%be%99%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet+%22https%3a%2f%2fpastebin.com%2fraw%2fbXApbsu8%22)()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%ba%91%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fXiaoYunCN%2fUWU%2fmain%2fXiaos______________________________________________________________Yun__________________________________________________________________________betaV2.3------------------------------------------------------------------------------------jsjalololololololololololololololololololllololol.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22USA%ef%bc%88%e5%8d%a1%e5%af%86%ef%bc%9aUSA+AER%ef%bc%89%22%2c%0a%0a++Callback+%3d+function()%0a%0a++++getgenv().USA%3d%22%e4%bd%9c%e8%80%85%e8%8e%ab%e7%be%bd%e5%85%8d%e8%b4%b9%e8%af%b7%e5%8b%bf%e5%80%92%e5%8d%96%22loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fboyscp%2fbeta%2fmain%2fUSA.lua%22))()%0a%0a+++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e6%b8%b8%e6%88%8f%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e5%88%b7%e9%87%91%e6%9d%a1(%e9%80%a0%e8%88%b9%e5%af%bb%e5%ae%9d)%22%2c%09%0a%0aCallback+%3d+function()%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fLyy77rnr%22%2ctrue))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%b7%b4%e6%8e%8c%e6%a8%a1%e6%8b%9f%e5%99%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fUnknownkellymc1%2fUnknownscripts%2fmain%2fslap-battles%27)))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddDropdown(%7b%0a%0a%09Name+%3d+%22%e9%80%89%e6%8b%a9%e4%bd%a0%e7%9a%84%e5%85%8d%e8%b4%b9%e8%88%b9(%e9%b2%a8%e9%b1%bc)%22%2c%0a%0a%09Default+%3d+%221%22%2c%0a%0a%09Options+%3d+%7b%22%e6%97%a0%22%2c+%22DuckyBoatBeta%22%2c+%22DuckyBoat%22%2c+%22BlueCanopyMotorboat%22%2c+%22BlueWoodenMotorboat%22%2c+%22UnicornBoat%22%2c+%22Jetski%22%2c+%22RedMarlin%22%2c+%22Sloop%22%2c+%22TugBoat%22%2c+%22SmallDinghyMotorboat%22%2c+%22JetskiDonut%22%2c+%22Marlin%22%2c+%22TubeBoat%22%2c+%22FishingBoat%22%2c+%22VikingShip%22%2c+%22SmallWoodenSailboat%22%2c+%22RedCanopyMotorboat%22%2c+%22Catamaran%22%2c+%22CombatBoat%22%2c+%22TourBoat%22%2c+%22Duckmarine%22%2c+%22PartyBoat%22%2c+%22MilitarySubmarine%22%2c+%22GingerbreadSteamBoat%22%2c+%22Sleigh2022%22%2c+%22Snowmobile%22%2c+%22CruiseShip%22%7d%2c%0a%0a%09Callback+%3d+function(Value)%0a%0alocal+ohString1+%3d+(Value)%0a%0agame%3aGetService(%22ReplicatedStorage%22).EventsFolder.BoatSelection.UpdateHostBoat%3aFireServer(ohString1)%0a%0a%09end+%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e6%9d%80%e9%b2%a8%e9%b1%bc%f0%9f%a6%88(%e9%b2%a8%e9%b1%bc)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fSw1ndlerScripts%2fRobloxScripts%2fmain%2fMisc%2520Scripts%2fsharkbite2.lua%22%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%a8%e7%94%bb%e6%98%9f%e6%9c%9f%e4%ba%94%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fwally-rblx%2ffunky-friday-autoplay%2fmain%2fmain.lua%22%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%ae%a0%e7%89%a9%e6%a8%a1%e6%8b%9f%e5%99%a8X%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet%27https%3a%2f%2fraw.githubusercontent.com%2fRunDTM%2fZeeroxHub%2fmain%2fLoader.lua%27)()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%9c%82%e7%be%a4%e6%a8%a1%e6%8b%9f%e5%99%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2f3A61hnGA%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Evade%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fBabyhamsta%2fRBLX_Scripts%2fmain%2fEvade%2fmain.lua%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%90%8e%e5%ae%a4%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fGsqd40fL%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Synapse+X%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2ftWGxhNq0%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%bd%a9%e8%99%b9%e6%9c%8b%e5%8f%8b%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fJNHHGaming%2fRainbow-Friends%2fmain%2fRainbow%2520Friends%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22HoHo%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2facsu123%2fHOHO_H%2fmain%2fLoading_UI%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22tds%e6%9f%a5%e7%9c%8b%e5%85%b5%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++local+Towers+%3d+game%3aGetService(%22Players%22).LocalPlayer.PlayerGui.Interface.Root.Inventory.View.Frame.Frame.Frame%0a%0a+%0a%0afor+_%2c+v+in+pairs(Towers%3aGetDescendants())+do%0a%0a%09if+v%3aIsA(%22ImageButton%22)+then%0a%0a++++++++v.Visible+%3d+true%0a%0a%09end%0a%0aend%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e9%80%9a%e7%94%a8%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%09%0a%0aName+%3d+%22%e5%b7%a5%e5%85%b7%e5%8c%85%22%2c%09%0a%0aCallback+%3d+function()%09loadstring(game%3aHttpGet(%22https%3a%2f%2fcdn.wearedevs.net%2fscripts%2fBTools.txt%22))()%09++%09%0a%0a+++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%80%8f%e8%a7%86%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fMA8jhPWT%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%bd%a6%22%2c%0a%0a%09Callback+%3d+function()+loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fMHE1cbWF%22))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%94%a9%e9%a3%9e%22%2c%0a%0a%09Callback+%3d+function()+loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fGnvPVBEi%22))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%97%a0%e9%99%90%e8%b7%b3%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fV5PQy3y0%22%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22FE%e8%84%9a%e6%9c%ac%f0%9f%8c%9a%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22C00lgui%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++loadstring(game%3aGetObjects(%22rbxassetid%3a%2f%2f8127297852%22)%5b1%5d.Source)()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%221x1x1x1%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet((%27https%3a%2f%2fpastebin.com%2fraw%2fJipYNCht%27)%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8f%98%e7%8e%a9%e5%ae%b6%ef%bc%88R6%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fXR4sGcgJ%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%a8%e7%94%bb%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fGamingScripter%2fAnimation-Hub%2fmain%2fAnimation%2520Gui%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%bd%9c%e8%80%85%e5%b0%8f%e4%ba%91%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%acdoors%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fwhXp1Ca2%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22DOORS%e5%a8%b1%e4%b9%90%e5%8d%81%e5%ad%97%e6%9e%b6(%e5%8f%aa%e5%af%b9%e8%87%aa%e5%b7%b1%e5%8f%ac%e5%94%a4%e7%9a%84%e6%80%aa%e6%9c%89%e7%94%a8)%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e5%88%b7%e6%80%aa%e8%8f%9c%e5%8d%95%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshuaguai%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22DOORS%e5%8f%98%e8%ba%ab%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fChronoAccelerator%2fPublic-Scripts%2fmain%2fMorphing%2fMorphScript.lua%22))()%3b%0a%0aend%0a%0a%7d)+%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e8%80%b6%e7%a8%a3%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizi2%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e7%b4%ab%e5%85%89%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizi3%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e4%b8%87%e5%9c%a3%e8%8a%82%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizi4%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e6%99%ae%e9%80%9a%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizizhen%22))()%0a%0a++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e9%80%a0%e8%88%b9%e5%af%bb%e5%ae%9d%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0alocal+Section+%3d+Tab%3aAddSection(%7b%0a%0a%09Name+%3d+%22%e4%bb%98%e8%b4%b9%e5%8a%9f%e8%83%bd%22%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e5%88%b7%e9%87%91%e6%9d%a1%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fLyy77rnr%22%2ctrue))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%b7%a5%e5%85%b7%e5%8c%85%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09loadstring(game%3aHttpGet(%22https%3a%2f%2fcdn.wearedevs.net%2fscripts%2fBTools.txt%22))()%09%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%98%b2%e6%ad%a2%e6%8e%89%e7%ba%bf%ef%bc%88%e5%8f%8d%e6%8c%82%e6%9c%ba%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09print(%22Anti+Afk+On%22)%0a%0a%09%09local+vu+%3d+game%3aGetService(%22VirtualUser%22)%0a%0a%09%09game%3aGetService(%22Players%22).LocalPlayer.Idled%3aconnect(function()%0a%0a%09%09+++vu%3aButton2Down(Vector2.new(0%2c0)%2cworkspace.CurrentCamera.CFrame)%0a%0a%09%09+++wait(1)%0a%0a%09%09+++vu%3aButton2Up(Vector2.new(0%2c0)%2cworkspace.CurrentCamera.CFrame)%0a%0a%09%09end)%0a%0a++%09end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e7%9b%91%e7%8b%b1%e4%ba%ba%e7%94%9f%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22PRISONWARE+V1.3%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fDenverrz%2fscripts%2fmaster%2fPRISONWARE_v1.3.txt%22))()%3b%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%ad%a6%e5%8d%ab%e5%ae%a4%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(847.7261352539062%2c+98.95999908447266%2c+2267.387451171875)%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%9b%91%e7%8b%b1%e5%ae%a4%e5%86%85%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(919.2575073242188%2c+98.95999908447266%2c+2379.74169921875)%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%bd%aa%e7%8a%af%e5%a4%8d%e6%b4%bb%e7%82%b9%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(-937.5891723632812%2c+93.09876251220703%2c+2063.031982421875)%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%9b%91%e7%8b%b1%e5%ae%a4%e5%a4%96%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(760.6033325195312%2c+96.96992492675781%2c+2475.405029296875)%0a%0a++%09end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e9%b2%a8%e5%8f%a3%e6%b1%82%e7%94%9f2%22%2c%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddDropdown(%7b%0a%0a%09Name+%3d+%22%e5%85%8d%e8%b4%b9%e8%88%b9%e5%8f%aa%22%2c%0a%0a%09Default+%3d+%221%22%2c%0a%0a%09Options+%3d+%7b%22DuckyBoatBeta%22%2c+%22DuckyBoat%22%2c+%22BlueCanopyMotorboat%22%2c+%22BlueWoodenMotorboat%22%2c+%22UnicornBoat%22%2c+%22Jetski%22%2c+%22RedMarlin%22%2c+%22Sloop%22%2c+%22TugBoat%22%2c+%22SmallDinghyMotorboat%22%2c+%22JetskiDonut%22%2c+%22Marlin%22%2c+%22TubeBoat%22%2c+%22FishingBoat%22%2c+%22VikingShip%22%2c+%22SmallWoodenSailboat%22%2c+%22RedCanopyMotorboat%22%2c+%22Catamaran%22%2c+%22CombatBoat%22%2c+%22TourBoat%22%2c+%22Duckmarine%22%2c+%22PartyBoat%22%2c+%22MilitarySubmarine%22%2c++%22GingerbreadSteamBoat%22%2c+%22Sleigh2022%22%2c+%22Snowmobile%22%2c+%22CruiseShip%22%7d%2c%0a%0a%09Callback+%3d+function(Value)%0a%0alocal+ohString1+%3d+(Value)%0a%0agame%3aGetService(%22ReplicatedStorage%22).EventsFolder.BoatSelection.UpdateHostBoat%3aFireServer(ohString1)%0a%0a%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e6%9d%80%e9%b2%a8%e9%b1%bc%f0%9f%a6%88%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fSw1ndlerScripts%2fRobloxScripts%2fmain%2fMisc%2520Scripts%2fsharkbite2.lua%22%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22FE%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22C00lgui%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aGetObjects(%22rbxassetid%3a%2f%2f8127297852%22)%5b1%5d.Source)()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%221x1x1x1%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet((%27https%3a%2f%2fpastebin.com%2fraw%2fJipYNCht%27)%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%a8%e7%94%bb%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fGamingScripter%2fAnimation-Hub%2fmain%2fAnimation%2520Gui%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e9%80%9a%e7%94%a8%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++++Name+%3d+%22%e9%98%bf%e5%b0%94%e5%ae%99%e6%96%afV3.0+UI%22%2c%0a%0a++++++Callback+%3d+function()%0a%0a++++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fAZYsGithub%2fchillz-workshop%2fmain%2fArceus%2520X%2520V3%22))()%0a%0a++++++end%0a%0a%7d)%0a%0a+%0a%0a+Tab%3aAddButton(%7b%0a%0a++Name+%3d+%22HUA+%e5%85%89%e5%bd%b1%22%2c%0a%0a++Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2farzRCgwS%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e5%85%89%e5%bd%b1_2%22%2c%0a%0a++Default+%3d+false%2c%0a%0a++Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMZEEN2424%2fGraphics%2fmain%2fGraphics.xml%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e7%be%8e%e4%b8%bd%e5%a4%a9%e7%a9%ba%22%2c%0a%0a++Callback+%3d+function()%0a%0a++++--+Roblox+Graphics+Enhancher%0a%0a++++local+light+%3d+game.Lighting%0a%0a++++for+i%2c+v+in+pairs(light%3aGetChildren())+do%0a%0a++++++v%3aDestroy()%0a%0a++++end%0a%0a++++local+ter+%3d+workspace.Terrain%0a%0a++++local+color+%3d+Instance.new(%22ColorCorrectionEffect%22)%0a%0a++++local+bloom+%3d+Instance.new(%22BloomEffect%22)%0a%0a++++local+sun+%3d+Instance.new(%22SunRaysEffect%22)%0a%0a++++local+blur+%3d+Inst%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%b6%85%e9%ab%98%e7%94%bb%e8%b4%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fjHBfJYmS%22))()%0a%0aend%0a%0a%7d)++++%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e6%97%8b%e8%bd%ac%22%2c%0a%0a++Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fr97d7dS0%27%2c+true))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddToggle(%7b%0a%0a%09Name+%3d+%22%e5%a4%9c%e8%a7%86%22%2c%0a%0a%09Default+%3d+false%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09if+Value+then%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(1%2c+1%2c+1)%0a%0a%09%09else%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(0%2c+0%2c+0)%0a%0a%09%09end%0a%0a%09end%0a%0a%7d)%0a%0a+%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%bd%a6%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fMHE1cbWF%22))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%88%ac%e5%a2%99%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fzXk4Rq2r%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%94%b5%e8%84%91%e9%94%ae%e7%9b%98%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fadvxzivhsjjdhxhsidifvsh%2fmobkeyboard%2fmain%2fmain.txt%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%b8%8f%e7%a9%ba%e8%a1%8c%e8%b5%b0%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fGhostPlayer352%2fTest4%2fmain%2fFloat%27))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%98%b2%e6%ad%a2%e6%8e%89%e7%ba%bf%ef%bc%88%e5%8f%8d%e6%8c%82%e6%9c%ba%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09print(%22Anti+Afk+On%22)%0a%0a%09%09local+vu+%3d+game%3aGetService(%22VirtualUser%22)%0a%0a%09%09game%3aGetService(%22Players%22).LocalPlayer.Idled%3aconnect(function()%0a%0a%09%09+++vu%3aButton2Down(Vector2.new(0%2c0)%2cworkspace.CurrentCamera.CFrame)%0a%0a%09%09+++wait(1)%0a%0a%09%09+++vu%3aButton2Up(Vector2.new(0%2c0)%2cworkspace.CurrentCamera.CFrame)%0a%0a%09%09end)%0a%0a++%09end%0a%0a%7d)%0a%0alocal+player+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e7%8e%a9%e5%ae%b6%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e9%87%8d%e5%8a%9b%e8%ae%be%e7%bd%ae%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Workspace.Gravity+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9a%90%e8%ba%ab(E)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09+loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fnwGEvkez%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%97%a0%e9%99%90%e8%b7%b3%22%2c%0a%0a++++Default+%3d+false%2c%0a%0a%09Callback+%3d+function(Value)%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fV5PQy3y0%22%2c+true))()%0a%0a%09end%0a%0a%7d)%0a%0aplayer%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e7%a7%bb%e5%8a%a8%e9%80%9f%e5%ba%a6%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.WalkSpeed+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aplayer%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e8%b7%b3%e8%b7%83%e9%ab%98%e5%ba%a6%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.JumpPower+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aplayer%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%a9%bf%e5%a2%99%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++++%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fjvyN5hT8%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aplayer%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%a1%8c%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++++%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fU27yQRxS%22))()%0a%0a++%09end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e4%bc%90%e6%9c%a8%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%85%88%e7%82%b9%e9%94%ae%e7%9b%98%ef%bc%8c%e5%86%8d%e7%82%b9%e8%bf%99%e4%b8%aa%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fButterisgood%2fbutter-hub%2fmain%2fbutters%2520recode-obfuscated.lua%27))(%22Apple+is+cute%22)%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%85%8d%e8%b4%b9%e7%99%bd%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fCloudX-ScriptsWane%2fScriptsDache%2fmain%2f%25E4%25BC%2590%25E6%259C%25A8%25E5%25A4%25A7%25E4%25BA%25A822.lua%22%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++++++Name+%3d+%22%e5%b0%8f%e4%ba%91bark2.0%22%2c%0a%0a++++++Callback+%3d+function()%0a%0a++++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fXiaoYunCN%2fUWU%2fmain%2fbark2.0.lua%22))()%0a%0a++++++end%0a%0a++++++%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22DOORS%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%be%ae%e5%b1%b1DOORS%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c112%5c97%5c115%5c116%5c101%5c98%5c105%5c110%5c46%5c99%5c111%5c109%5c47%5c114%5c97%5c119%5c47%5c117%5c72%5c72%5c112%5c56%5c102%5c122%5c83%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22kingHub(%e5%b7%b2%e6%9b%b4%e6%96%b0)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fKINGHUB01%2fBlackKing%2fmain%2fBlackKing%2520Doors%2520Mobile%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e9%97%a8%e7%bb%98%e5%9b%be%e6%98%be%e7%a4%ba%22%2c%0a%0a++Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fdoors1%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%89%8b%e7%94%b5%e7%ad%92%ef%bc%88%e6%b2%a1%e7%94%b5%e4%bc%9a%e6%9c%89bug%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fK0t1n%2fPublic%2fmain%2fNormal%2520Flashlight%22))()%0a%0aend%0a%0a%7d)++++++%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22DOORS%e4%bd%8e%e5%9b%9e%e6%8b%89%e7%a9%bf%e5%a2%99%22%2c%0a%0a++Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fgithub.com%2fDXuwu%2fOK%2fraw%2fmain%2fclip%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e5%88%b7%e6%80%aa%e8%8f%9c%e5%8d%95%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshuaguai%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22DOORS%e5%8f%98%e8%ba%ab%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fChronoAccelerator%2fPublic-Scripts%2fmain%2fMorphing%2fMorphScript.lua%22))()%3b%0a%0aend%0a%0a%7d)+%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%b8%8d%e5%8f%af%e8%83%bd%e6%a8%a1%e5%bc%8f%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fUkazix%2fimpossible-mode%2fmain%2fProtected_79.lua.txt%27))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Endless%e6%a8%a1%e5%bc%8f%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcheck78%2fworldcuuuup%2fmain%2fScript.lua%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%89%a9%e5%93%81%e5%a4%8d%e5%88%b6%e6%9e%aa%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fEverythingGunByNeRD.lua%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%8e%a7%e5%88%b6%e7%89%a9%e5%93%81%e5%a4%a7%e5%b0%8f%e6%9e%aa%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fSizeChangerByNerd.lua%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a6%99%e8%95%89%e6%9e%aa(%e5%8f%af%e5%9c%a8%e5%9b%b0%e9%9a%be%e6%a8%a1%e5%bc%8f%e5%8f%91%e5%b0%84%e9%a6%99%e8%95%89)%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fBananaGunByNerd.lua%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%89%8b%e6%8c%81%e8%87%ad%e7%8c%ab%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fK0t1n%2fPublic%2fmain%2fMaxwell%2520Plushie%22))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%a3%81%e9%93%81%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fMagnetByNerd.lua%22))()%0a%0a++%09end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e6%9e%81%e9%80%9f%e4%bc%a0%e5%a5%87%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%bc%80%e5%90%af%e5%8d%a1%e5%ae%a0%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fuR6azdQQ%22))()%09%09%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e9%87%8d%e7%94%9f%e5%92%8c%e8%87%aa%e5%8a%a8%e5%88%b7%e7%ad%89%e7%ba%a7%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fAyeCYbT6%22))()++++++++%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Section+%3d+Tab%3aAddSection(%7b%0a%0a%09Name+%3d+%22%e4%bc%a0%e9%80%81%e5%b2%9b%e5%b1%bf%22%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%bf%94%e8%bf%98%e5%87%ba%e7%94%9f%e5%b2%9b%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(-9682.98828125%2c+58.87917709350586%2c+3099.033935546875)++++++%0a%0a%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%99%bd%e9%9b%aa%e5%9f%8e%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(-9676.138671875%2c+58.87917709350586%2c+3782.69384765625)+++end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%86%94%e5%b2%a9%e5%9f%8e%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(-11054.96875%2c+216.83917236328125%2c+4898.62841796875)+++++++%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bc%a0%e5%a5%87%e5%85%ac%e8%b7%af%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+CFrame.new(-13098.87109375%2c+216.83917236328125%2c+5907.6279296875)++++end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e4%bf%84%e4%ba%a5%e4%bf%84%e5%b7%9e%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bf%84%e4%ba%a5%e4%bf%84%e5%b7%9e%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fhkvHeHed%22%2ctrue))()%0a%0aend%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e8%9c%82%e7%be%a4%e6%a8%a1%e6%8b%9f%e5%99%a8%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bf%ae%e5%8b%be%e7%9a%84%e8%9c%82%e7%be%a4%22%2c%0a%0a%09Callback+%3d+function()%0a%0a%09loadstring(game%3aHttpGet(%22https%3a%2f%2frahttps%3a%2f%2frahttps%3a%2f%2fraw.githubusercontent.com%2fUSA868%2fUSA--%2fmain%2f.github%2f%25E5%25B7%25A5%25E4%25BD%259C%25E6%25B5%2581%25E7%25A8%258B%2f1%25E6%259D%2596%25E4%25BA%25BA%25E4%25BD%25BF%25E7%2594%25A8%3ftoken%3dGHSAT0AAAAAACB6LLQWA5JNQNNWTP47AOWSZCLYRTQ%22))()%0a%0aend%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e5%b9%b8%e8%bf%90%e6%96%b9%e5%9d%97%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22HUA+%e5%b9%b8%e8%bf%90%e6%96%b9%e5%9d%97%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fQS5CcYdU%22))()%0a%0aend%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22MM2%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22HUA+MM2%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fA6z5Ba66%22))()%0a%0aend%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++++Name+%3d+%22%e5%bf%8d%e8%80%85%e4%bc%a0%e5%a5%87%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%87%aa%e5%8a%a8%e6%8c%a5%e8%88%9e%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autoswing+%3d+x%0a%0a++++++++++++if+autoswing+then%0a%0a++++++++++++++++swinging()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%87%aa%e5%8a%a8%e5%94%ae%e5%8d%96%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autosell+%3d+x%0a%0a++++++++++++if+autosell+then%0a%0a++++++++++++++++selling()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0a++++%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e5%ad%98%e6%bb%a1%e4%ba%86%e8%87%aa%e5%8a%a8%e5%94%ae%e5%8d%96%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autosellmax+%3d+x%0a%0a++++++++++++if+autosellmax+then%0a%0a++++++++++++++++maxsell()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0alocal+Section+%3d+Tab%3aAddSection(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e8%b4%ad%e4%b9%b0%e5%8a%9f%e8%83%bd%22%0a%0a%7d)%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%87%aa%e5%8a%a8%e8%b4%ad%e4%b9%b0%e5%89%91%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autobuyswords+%3d+x%0a%0a++++++++++++if+autobuyswords+then%0a%0a++++++++++++++++buyswords()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%87%aa%e5%8a%a8%e8%b4%ad%e4%b9%b0%e8%85%b0%e5%b8%a6%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autobuybelts+%3d+x%0a%0a++++++++++++if+autobuybelts+then%0a%0a++++++++++++++++buybelts()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%87%aa%e5%8a%a8%e8%b4%ad%e4%b9%b0%e7%a7%b0%e5%8f%b7%ef%bc%88%e7%ad%89%e7%ba%a7%ef%bc%89%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autobuyranks+%3d+x%0a%0a++++++++++++if+autobuyranks+then%0a%0a++++++++++++++++buyranks()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%87%aa%e5%8a%a8%e8%b4%ad%e4%b9%b0%e5%bf%8d%e6%9c%af%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autobuyskill+%3d+x%0a%0a++++++++++++if+autobuyskill+then%0a%0a++++++++++++++++buyskill()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0aTab%3aAddToggle(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%87%aa%e5%8a%a8%e8%b4%ad%e4%b9%b0%ef%bc%88%e5%85%a8%e9%83%a8%e6%89%93%e5%bc%80%e5%b0%b1%e8%a1%8c%ef%bc%89%22%2c%0a%0a++++++++Default+%3d+false%2c%0a%0a++++++++Callback+%3d+function(x)%0a%0a++++++++++++autobuyshurikens+%3d+x%0a%0a++++++++++++if+autobuyshurikens+then%0a%0a++++++++++++++++buyshurikens()%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0aTab%3aAddButton(%0a%0a++++%7b%0a%0a++++++++Name+%3d+%22%e8%a7%a3%e9%94%81%e6%89%80%e6%9c%89%e5%b2%9b%22%2c%0a%0a++++++++Callback+%3d+function()%0a%0a++++++++++++for+_%2c+v+in+next%2c+game.workspace.islandUnlockParts%3aGetChildren()+do%0a%0a++++++++++++++++if+v+then%0a%0a++++++++++++++++++++game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame+%3d+v.islandSignPart.CFrame%0a%0a++++++++++++++++++++wait(.5)%0a%0a++++++++++++++++end%0a%0a++++++++++++end%0a%0a++++++++end%0a%0a++++%7d%0a%0a)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22%e9%80%9a%e7%94%a8%e8%84%9a%e6%9c%ac%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a++%7d)%0a%0a++%0a%0a+Tab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%a1%8c%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2frentry.co%2fshadiao_yazifly%2fraw%27))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e7%a7%bb%e5%8a%a8%e9%80%9f%e5%ba%a6%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.WalkSpeed+%3d+Value%0a%0a%09end%09+%0a%0a%7d)%0a%0a+Tab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e8%b7%b3%e8%b7%83%e9%ab%98%e5%ba%a6%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.JumpPower+%3d+Value%0a%0a%09end%09+%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e6%9c%80%e5%a4%a7%e8%a1%80%e9%87%8f%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.MaxHealth+%3d+Value%0a%0a%09end%09+%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e5%bd%93%e5%89%8d%e8%a1%80%e9%87%8f%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Players.LocalPlayer.Character.Humanoid.Health+%3d+Value%0a%0a%09end%09+%0a%0a%7d)%0a%0aTab%3aAddTextbox(%7b%0a%0a%09Name+%3d+%22%e9%87%8d%e5%8a%9b%e8%ae%be%e7%bd%ae%22%2c%0a%0a%09Default+%3d+%22%22%2c%0a%0a%09TextDisappear+%3d+true%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09game.Workspace.Gravity+%3d+Value%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%bf%ae%e6%94%b9%e7%8e%a9%e5%ae%b6%e7%a2%b0%e6%92%9e%e7%ae%b1%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2frentry.co%2faaaaaaaaaduckduck%2fraw%27))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%b2%98%e5%a2%99%e8%a1%8c%e8%b5%b0%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fzXk4Rq2r%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddToggle(%7b%0a%0a%09Name+%3d+%22%e5%a4%9c%e8%a7%86%22%2c%0a%0a%09Default+%3d+false%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09if+Value+then%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(1%2c+1%2c+1)%0a%0a%09%09else%0a%0a%09%09++++game.Lighting.Ambient+%3d+Color3.new(0%2c+0%2c+0)%0a%0a%09%09end%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddToggle(%7b%0a%0a%09Name+%3d+%22%e7%a9%bf%e5%a2%99%22%2c%0a%0a%09Default+%3d+false%2c%0a%0a%09Callback+%3d+function(Value)%0a%0a%09%09if+Value+then%0a%0a%09%09++++Noclip+%3d+true%0a%0a%09%09++++Stepped+%3d+game.RunService.Stepped%3aConnect(function()%0a%0a%09%09%09++++if+Noclip+%3d%3d+true+then%0a%0a%09%09%09%09++++for+a%2c+b+in+pairs(game.Workspace%3aGetChildren())+do%0a%0a++++++++++++++++++++++++if+b.Name+%3d%3d+game.Players.LocalPlayer.Name+then%0a%0a++++++++++++++++++++++++++++for+i%2c+v+in+pairs(game.Workspace%5bgame.Players.LocalPlayer.Name%5d%3aGetChildren())+do%0a%0a++++++++++++++++++++++++++++++++if+v%3aIsA(%22BasePart%22)+then%0a%0a++++++++++++++++++++++++++++++++++++v.CanCollide+%3d+false%0a%0a++++++++++++++++++++++++++++++++end%0a%0a++++++++++++++++++++++++++++end%0a%0a++++++++++++++++++++++++end%0a%0a++++++++++++++++++++end%0a%0a%09%09%09++++else%0a%0a%09%09%09%09++++Stepped%3aDisconnect()%0a%0a%09%09%09++++end%0a%0a%09%09++++end)%0a%0a%09++++else%0a%0a%09%09++++Noclip+%3d+false%0a%0a%09++++end%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%bd%ac%e8%b5%b7%e6%9d%a5%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++++%09loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fr97d7dS0%27%2c+true))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%bd%ac%e5%9c%88fling+GUI%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fr97d7dS0%27%2c+true))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%94%81%e5%ae%9afling%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fscriptblox.com%2fraw%2fUniversal-Script-Best-Target-Fling-10816%22))()%0a%0aend%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22%e6%9e%81%e9%80%9f%e4%bc%a0%e5%a5%87%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a++%7d)%0a%0a++%0a%0a++Tab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%9e%81%e9%80%9f%e4%bc%a0%e5%a5%87%22%2c%09Callback+%3d+function()%0a%0a++++++%09loadstring(game%3aHttpGet(%27%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c98%5c111%5c121%5c115%5c99%5c112%5c47%5c98%5c101%5c116%5c97%5c47%5c109%5c97%5c105%5c110%5c47%5c37%5c69%5c57%5c37%5c56%5c48%5c37%5c57%5c70%5c37%5c69%5c53%5c37%5c66%5c65%5c37%5c65%5c54%5c37%5c69%5c55%5c37%5c56%5c50%5c37%5c66%5c56%5c37%5c69%5c56%5c37%5c66%5c53%5c37%5c66%5c55%5c46%5c108%5c117%5c97%27))()%0a%0a++%09end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%ad%e5%bf%83%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a++%7d)%0a%0a++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fDe4aYHDY%22))()%0a%0a++%09end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22DOORS%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%a5%9e%e5%85%89%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++_G%5b%22%e7%a5%9e%e5%85%89%e8%84%9a%e6%9c%ac%e4%bd%9c%e8%80%85TA%22%5d%3d%22xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey%22loadstring(game%3aHttpGet(utf8.char((function()+return+table.unpack(%7b104%2c116%2c116%2c112%2c115%2c58%2c47%2c47%2c112%2c97%2c115%2c116%2c101%2c98%2c105%2c110%2c46%2c99%2c111%2c109%2c47%2c114%2c97%2c119%2c47%2c109%2c119%2c48%2c112%2c102%2c69%2c70%2c77%7d)end)())))()--%e7%a5%9e%e5%85%89%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9d%a2%e5%8c%85%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++_G%5b%22%e9%9d%a2%e5%8c%85%e8%84%9a%e6%9c%ac%e4%bd%9c%e8%80%85TA%22%5d%3d%22xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey%22loadstring(game%3aHttpGet(utf8.char((function()+return+table.unpack(%7b104%2c116%2c116%2c112%2c115%2c58%2c47%2c47%2c112%2c97%2c115%2c116%2c101%2c98%2c105%2c110%2c46%2c99%2c111%2c109%2c47%2c114%2c97%2c119%2c47%2c109%2c119%2c48%2c112%2c102%2c69%2c70%2c77%7d)end)())))()--%e7%a5%9e%e5%85%89%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Ohio+doors%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2frxn-xyz%2fOhio.%2fmain%2fOhio.lua%22%2ctrue))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%ba%91doors%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fXiaoYunCN%2fUWU%2fmain%2fhsjakajaaa.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%90%b8%e9%93%81%e7%9f%b3%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fMagnetByNerd.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%89%aa%e5%88%80%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fMrNeRD0%2fDoors-Hack%2fmain%2fshears_done.lua%22))()%0a%0a++++end%0a%0a%7d)++++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%bf%80%e5%85%89%e6%9e%aa%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fK0t1n%2fPublic%2fmain%2fLaser%2520Gun%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%a4%9c%e8%a7%86%e4%bb%aa%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++%0a%0a++_G.OnShop+%3d+trueloadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2fDeividComSono%2fScripts%2fmain%2fScanner.lua%27))()%0a%0a++++end%0a%0a%7d)++++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%9c%80%e5%bc%ba%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fR8QMbhzv%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++%0a%0aloadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fibbWwU6q%27))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%83%bd%e9%87%8f%e7%bd%90%ef%bc%88%e6%b8%85%e5%b2%a9%e6%8f%90%e4%be%9b%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()++%0a%0a++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fnengliangtiao%22))()%0a%0a++++end%0a%0a%7d)+++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%b4%ab%e8%89%b2%e6%89%8b%e7%94%b5%e7%ad%92%ef%bc%88%e5%9c%a8%e7%94%b5%e6%a2%af%e8%b4%ad%e4%b9%b0%e4%b8%9c%e8%a5%bf%e7%9a%84%e6%97%b6%e5%80%99%e4%bd%bf%e7%94%a8%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++%0a%0a++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fK0t1n%2fPublic%2fmain%2fPurple%2520Flashlight%22))()%0a%0a++++end%0a%0a%7d)++%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22%e5%9b%bd%e7%8e%8b%e9%81%97%e4%ba%a7%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a++%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22trick%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fStrikehubv2z%2fStormSKz%2fmain%2fAll_in_one%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22ipper+hub%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fhajibeza%2fRIPPER-HUB%2fmain%2fKing%2520Leagacy%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Xenon+Hub%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2f1f0yt%2fcommunity%2fmaster%2flegacy%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22lack%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fsannin9000%2fscripts%2fmain%2fkinglegacy.lua%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22yper+hub%22%2c%0a%0a%09Callback+%3d+function()%0a%0arepeat+wait()+until+game%3aIsLoaded()loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fDookDekDEE%2fHyper%2fmain%2fscript.lua%22))()+%0a%0aend%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%9d%92%e8%9b%99%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++%0a%0agetgenv().eom+%3d+%22%e9%9d%92%e8%9b%99%22%0a%0aloadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c39%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c112%5c97%5c115%5c116%5c101%5c98%5c105%5c110%5c46%5c99%5c111%5c109%5c47%5c114%5c97%5c119%5c47%5c68%5c122%5c120%5c115%5c81%5c82%5c68%5c85%5c39%5c41%5c41%5c40%5c41%22)()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%9c%b0%e5%b2%a9%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c34%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c98%5c98%5c97%5c109%5c120%5c98%5c98%5c97%5c109%5c120%5c98%5c98%5c97%5c109%5c120%5c47%5c99%5c111%5c100%5c101%5c115%5c112%5c97%5c99%5c101%5c115%5c45%5c98%5c108%5c97%5c110%5c107%5c47%5c109%5c97%5c105%5c110%5c47%5c37%5c69%5c55%5c37%5c57%5c57%5c37%5c66%5c68%5c34%5c41%5c41%5c40%5c41%22)()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22ato%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fatoyayaya%2fjiaoben%2fmain%2fjiamilist%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%be%99%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet+%22https%3a%2f%2fpastebin.com%2fraw%2fbXApbsu8%22)()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%ba%91%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fXiaoYunCN%2fUWU%2fmain%2fXiaos______________________________________________________________Yun__________________________________________________________________________betaV2.3------------------------------------------------------------------------------------jsjalololololololololololololololololololllololol.lua%22))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22USA%ef%bc%88%e5%8d%a1%e5%af%86%ef%bc%9aUSA+AER%ef%bc%89%22%2c%0a%0a++Callback+%3d+function()%0a%0a++++getgenv().USA%3d%22%e4%bd%9c%e8%80%85%e8%8e%ab%e7%be%bd%e5%85%8d%e8%b4%b9%e8%af%b7%e5%8b%bf%e5%80%92%e5%8d%96%22loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fboyscp%2fbeta%2fmain%2fUSA.lua%22))()%0a%0a+++end%0a%0a%7d)local+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%ac%e5%a4%a7%e5%85%a8%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e5%88%b7%e9%87%91%e6%9d%a1(%e9%80%a0%e8%88%b9%e5%af%bb%e5%ae%9d)%22%2c%09%0a%0aCallback+%3d+function()%09loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fLyy77rnr%22%2ctrue))()%0a%0a++%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%b7%b4%e6%8e%8c%e6%a8%a1%e6%8b%9f%e5%99%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet((%27https%3a%2f%2fraw.githubusercontent.com%2fUnknownkellymc1%2fUnknownscripts%2fmain%2fslap-battles%27)))()%0a%0a++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Blox+Fruit%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fFrerfgzz%2ffree-script%2fmain%2fSMZHUBv2BETA%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e4%b8%80%e8%b7%af%e5%90%91%e8%a5%bf%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fpHN96bvq%22))()%0a%0aend%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%9b%e9%87%8f%e4%bc%a0%e5%a5%87%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fharisiskandar178%2fRoblox-Script%2fmain%2fMuscle%2520Legend%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22%e9%b2%a8%e5%8f%a3%e6%b1%82%e7%94%9f2%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a++%7d)%0a%0a++%0a%0aTab%3aAddDropdown(%7b%0a%0a%09Name+%3d+%22%e9%80%89%e6%8b%a9%e4%bd%a0%e7%9a%84%e5%85%8d%e8%b4%b9%e8%88%b9(%e9%b2%a82)%22%2c%0a%0a%09Default+%3d+%221%22%2c%0a%0a%09Options+%3d+%7b%22%e6%97%a0%22%2c+%22DuckyBoatBeta%22%2c+%22DuckyBoat%22%2c+%22BlueCanopyMotorboat%22%2c+%22BlueWoodenMotorboat%22%2c+%22UnicornBoat%22%2c+%22Jetski%22%2c+%22RedMarlin%22%2c+%22Sloop%22%2c+%22TugBoat%22%2c+%22SmallDinghyMotorboat%22%2c+%22JetskiDonut%22%2c+%22Marlin%22%2c+%22TubeBoat%22%2c+%22FishingBoat%22%2c+%22VikingShip%22%2c+%22SmallWoodenSailboat%22%2c+%22RedCanopyMotorboat%22%2c+%22Catamaran%22%2c+%22CombatBoat%22%2c+%22TourBoat%22%2c+%22Duckmarine%22%2c+%22PartyBoat%22%2c+%22MilitarySubmarine%22%2c+%22GingerbreadSteamBoat%22%2c+%22Sleigh2022%22%2c+%22Snowmobile%22%2c+%22CruiseShip%22%7d%2c%0a%0a%09Callback+%3d+function(Value)%0a%0alocal+ohString1+%3d+(Value)%0a%0agame%3aGetService(%22ReplicatedStorage%22).EventsFolder.BoatSelection.UpdateHostBoat%3aFireServer(ohString1)%0a%0a%09end+%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%87%aa%e5%8a%a8%e6%9d%80%e9%b2%a8%e9%b1%bc%ef%bc%88%e9%b2%a82%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fSw1ndlerScripts%2fRobloxScripts%2fmain%2fMisc%2520Scripts%2fsharkbite2.lua%22%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22%e8%84%9a%e6%9c%ac%e5%a4%a7%e5%85%a82%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a++%7d)%0a%0a++%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%a8%e6%84%9f%e6%98%9f%e6%9c%9f%e4%ba%94%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fwally-rblx%2ffunky-friday-autoplay%2fmain%2fmain.lua%22%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%ae%a0%e7%89%a9%e6%a8%a1%e6%8b%9f%e5%99%a8X%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet%27https%3a%2f%2fraw.githubusercontent.com%2fRunDTM%2fZeeroxHub%2fmain%2fLoader.lua%27)()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%9c%82%e7%be%a4%e6%a8%a1%e6%8b%9f%e5%99%a8%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2f3A61hnGA%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Evade%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fBabyhamsta%2fRBLX_Scripts%2fmain%2fEvade%2fmain.lua%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%90%8e%e5%ae%a4%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fGsqd40fL%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22Synapse+X%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2ftWGxhNq0%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%bd%a9%e8%99%b9%e6%9c%8b%e5%8f%8b%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fJNHHGaming%2fRainbow-Friends%2fmain%2fRainbow%2520Friends%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22HoHo+blox+fruit%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fraw.githubusercontent.com%2facsu123%2fHOHO_H%2fmain%2fLoading_UI%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22tds%e6%9f%a5%e7%9c%8b%e5%85%b5%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++local+Towers+%3d+game%3aGetService(%22Players%22).LocalPlayer.PlayerGui.Interface.Root.Inventory.View.Frame.Frame.Frame%0a%0a+%0a%0afor+_%2c+v+in+pairs(Towers%3aGetDescendants())+do%0a%0a%09if+v%3aIsA(%22ImageButton%22)+then%0a%0a++++++++v.Visible+%3d+true%0a%0a%09end%0a%0aend%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e9%80%9a%e7%94%a82%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%09%0a%0aName+%3d+%22%e5%b7%a5%e5%85%b7%e5%8c%85%22%2c%09%0a%0aCallback+%3d+function()%09loadstring(game%3aHttpGet(%22https%3a%2f%2fcdn.wearedevs.net%2fscripts%2fBTools.txt%22))()%09++%09%0a%0a+++++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%80%8f%e8%a7%86%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%27https%3a%2f%2fpastebin.com%2fraw%2fMA8jhPWT%27))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e9%a3%9e%e8%bd%a6%22%2c%0a%0a%09Callback+%3d+function()+loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fMHE1cbWF%22))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e7%94%a9%e9%a3%9e%22%2c%0a%0a%09Callback+%3d+function()+loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fGnvPVBEi%22))()%0a%0a%09end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%97%a0%e9%99%90%e8%b7%b3%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fV5PQy3y0%22%2c+true))()%0a%0a++++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22FE%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22C00lgui%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++loadstring(game%3aGetObjects(%22rbxassetid%3a%2f%2f8127297852%22)%5b1%5d.Source)()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%221x1x1x1%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet((%27https%3a%2f%2fpastebin.com%2fraw%2fJipYNCht%27)%2ctrue))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8f%98%e7%8e%a9%e5%ae%b6%ef%bc%88R6%ef%bc%89%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fXR4sGcgJ%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e5%8a%a8%e7%94%bb%e4%b8%ad%e5%bf%83%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fGamingScripter%2fAnimation-Hub%2fmain%2fAnimation%2520Gui%22%2c+true))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22doors2%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e8%84%9a%e6%9c%acdoors%22%2c%0a%0a%09Callback+%3d+function()%0a%0a+++++loadstring(game%3aHttpGet(%22https%3a%2f%2fpastebin.com%2fraw%2fwhXp1Ca2%22))()%0a%0a++%09end++++%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a++Name+%3d+%22DOORS%e5%a8%b1%e4%b9%90%e5%8d%81%e5%ad%97%e6%9e%b6(%e5%8f%aa%e5%af%b9%e8%87%aa%e5%b7%b1%e5%8f%ac%e5%94%a4%e7%9a%84%e6%80%aa%e6%9c%89%e7%94%a8)%22%2c%0a%0a++Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a++PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e5%88%b7%e6%80%aa%e8%8f%9c%e5%8d%95%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshuaguai%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22DOORS%e5%8f%98%e8%ba%ab%e8%84%9a%e6%9c%ac%22%2c%0a%0a%09Callback+%3d+function()%0a%0aloadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fChronoAccelerator%2fPublic-Scripts%2fmain%2fMorphing%2fMorphScript.lua%22))()%3b%0a%0aend%0a%0a%7d)+%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e8%80%b6%e7%a8%a3%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizi2%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e7%b4%ab%e5%85%89%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizi3%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e4%b8%87%e5%9c%a3%e8%8a%82%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizi4%22))()%0a%0a++end%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a++Name+%3d+%22%e6%99%ae%e9%80%9a%e5%8d%81%e5%ad%97%e6%9e%b6%22%2c%0a%0a++Callback+%3d+function+()%0a%0a++++loadstring(game%3aHttpGet(%22https%3a%2f%2fraw.githubusercontent.com%2fcbhlyy%2flyycbh%2fmain%2fshizizhen%22))()%0a%0a++end%0a%0a%7d)%0a%0alocal+Tab+%3d+Window%3aMakeTab(%7b%0a%0a%09Name+%3d+%22%e6%b0%b4%e4%b8%8b%e4%b8%96%e7%95%8c%22%2c%0a%0a%09Icon+%3d+%22rbxassetid%3a%2f%2f4483345998%22%2c%0a%0a%09PremiumOnly+%3d+false%0a%0a%7d)%0a%0aTab%3aAddButton(%7b%0a%0a%09Name+%3d+%22%e6%b0%b4%e4%b8%8b%e4%b8%96%e7%95%8c%e5%8d%a1%e5%af%86xiaoxiaoyu%22%2c%0a%0a%09Callback+%3d+function()%0a%0a++++loadstring(%22%5c108%5c111%5c97%5c100%5c115%5c116%5c114%5c105%5c110%5c103%5c40%5c103%5c97%5c109%5c101%5c58%5c72%5c116%5c116%5c112%5c71%5c101%5c116%5c40%5c34%5c104%5c116%5c116%5c112%5c115%5c58%5c47%5c47%5c114%5c97%5c119%5c46%5c103%5c105%5c116%5c104%5c117%5c98%5c117%5c115%5c101%5c114%5c99%5c111%5c110%5c116%5c101%5c110%5c116%5c46%5c99%5c111%5c109%5c47%5c52%5c118%5c53%5c110%5c55%5c110%5c47%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c108%5c47%5c109%5c97%5c105%5c110%5c47%5c85%5c110%5c100%5c101%5c114%5c119%5c97%5c116%5c101%5c114%5c37%5c50%5c48%5c119%5c111%5c114%5c108%5c100%5c46%5c108%5c117%5c97%5c34%5c41%5c41%5c40%5c41%5c10%22)()%0a%0a++end%0a%0a%7d)%0a%0a++wait(3)+--%e7%ad%89%e5%be%85%e4%b8%89%e7%a7%92%0a++--%e4%bd%a0%e7%9a%84%e8%84%9a%e6%9c%ac%0a++++else+--%e9%aa%8c%e8%af%81%e5%a4%b1%e8%b4%a5%e6%89%a7%e8%a1%8c%e2%86%93%0asetclipboard(%22%e6%b2%a1%e6%9c%89%22)%0alocal+CoreGui+%3d+game%3aGetService(%22StarterGui%22)%0a%0aCoreGui%3aSetCore(%22SendNotification%22%2c+%7b%0a++++Title+%3d+%22%e9%aa%8c%e8%af%81%e5%a4%b1%e8%b4%a5%22%2c%0a++++Text+%3d+%22%e4%bd%a0%e5%b9%b6%e6%b2%a1%e6%9c%89%e5%8a%a0%e5%85%a5%e7%99%bd%e5%90%8d%e5%8d%95%22%2c%0a++++Duration+%3d+10%2c+--%e6%97%b6%e9%97%b4%0a%7d)%0agame.Players.LocalPlayer%3aKick(a..%22%e4%bd%a0%e6%b2%a1%e6%9c%89%e8%a2%ab%e5%88%97%e5%85%a5%e7%99%bd%e5%90%8d%e5%8d%95%ef%bc%8c%e8%af%b7%e8%b4%ad%e4%b9%b0%e6%88%96%e8%80%85%e6%89%be%e7%be%a4%e4%b8%bb%e5%8f%8d%e9%a6%88%e7%be%a4%e4%b8%bbQQ3491629303%22)%0aend
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "确认身份",
+    Text = "正在验证....",
+    Duration = 3, 
+})
+
+local a=tostring(game.Players.LocalPlayer.Character);
+
+if a=="FEAcasm"then        
+_G.she=true
+elseif a=="nsjxjcn"then
+_G.she=true
+elseif a=="catwithfiv"then
+_G.she=true
+elseif a=="sjqgduf2"then
+_G.she=true
+elseif a=="reretwyv"then
+_G.she=true
+elseif a=="cat"then
+_G.she=true
+elseif a=="DT_1x1x1x1x1"then
+_G.she=true
+elseif a=="无名"then
+_G.she=true
+elseif a=="无名"then
+_G.she=true
+elseif a=="098765dd4"then
+_G.she=true
+end
+if _G.she==true then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "验证结果",
+    Text = a.."验证身份成功",
+    Duration = 5,
+})
+
+wait(3.5)
+
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/FUEx0f3G"))()
+local LBLG = Instance.new("ScreenGui", getParent)
+local LBL = Instance.new("TextLabel", getParent)
+local player = game.Players.LocalPlayer
+
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+LBL.Name = "LBL"
+LBL.Parent = LBLG
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.75,0,0.010,0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "TextLabel"
+LBL.TextColor3 = Color3.new(1, 1, 1)
+LBL.TextScaled = true
+LBL.TextSize = 14
+LBL.TextWrapped = true
+LBL.Visible = true
+
+local FpsLabel = LBL
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = { }
+
+local function HeartbeatUpdate()
+	LastIteration = tick()
+	for Index = #FrameUpdateTable, 1, -1 do
+		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+	end
+	FrameUpdateTable[1] = LastIteration
+	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+	CurrentFPS = CurrentFPS - CurrentFPS % 1
+	FpsLabel.Text = ("北京时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+end
+Start = tick()
+Heartbeat:Connect(HeartbeatUpdate)
+local Window = OrionLib:MakeWindow({Name = "小达中心", HidePremium = false, SaveConfig = true,IntroText = "小达脚本", ConfigFolder = "小达脚本"})
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "小达脚本"; Text ="小达脚本"; Duration = 4; })
+
+local about = Window:MakeTab({
+    Name = "小达制作",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+about:AddParagraph("脚本为收费脚本 请勿去二改")
+about:AddParagraph("禁止被圈")
+
+local Tab =Window:MakeTab({
+	Name = "公告",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "复制作者QQ",
+	Callback = function()
+     setclipboard("sjqgduf2")
+  	end
+})
+
+Tab:AddButton({
+	Name = "复制QQ群",
+	Callback = function()
+     setclipboard("809565207")
+  	end
+})
+
+OrionLib:MakeNotification({
+	Name = "小达脚本",
+	Content = "欢迎使用小达脚本",
+	Image = "rbxassetid://4483345998",
+	Time = 2
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "陈脚本DOORS2.0",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "门2.0",
+
+	Callback = function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\89\83\108\111\110\47\82\65\87\45\46\46\97\45\115\99\114\105\112\116\47\109\97\105\110\47\37\69\57\37\57\57\37\56\56\68\79\79\82\83\50\46\48\77\79\79\78\37\69\54\37\66\55\37\66\55\37\69\54\37\66\55\37\56\54\34\41\41\40\41")()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "玩家",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+local Section = Tab:AddSection({
+
+	Name = "欢迎欢迎玩家"
+
+})
+
+Tab:AddSlider({
+
+	Name = "速度",
+
+	Min = 16,
+
+	Max = 200,
+
+	Default = 16,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end    
+
+})
+
+Tab:AddSlider({
+
+	Name = "跳跃高度",
+
+	Min = 50,
+
+	Max = 200,
+
+	Default = 50,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end    
+
+})
+
+Tab:AddTextbox({
+
+	Name = "跳跃高度设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end
+
+})
+
+Tab:AddTextbox({
+
+	Name = "移动速度设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end
+
+})
+
+Tab:AddTextbox({
+
+	Name = "重力设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Workspace.Gravity = Value
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "夜视",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+
+		else
+
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+
+		end
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "飞行V3（隐藏）",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/U27yQRxS'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "替身",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "爬墙",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "光影V4",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "变成蛇",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://pastefy.ga/tWBTcE4R/raw'),true))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "让别让别人控制自己",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://pastefy.ga/a7RTi4un/raw'),true))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "点击传送工具",
+
+	Callback = function()
+
+mouse = game.Players.LocalPlayer:GetMouse() tool = Instance.new("Tool") tool.RequiresHandle = false tool.Name = "[FE] TELEPORT TOOL" tool.Activated:connect(function() local pos = mouse.Hit+Vector3.new(0,2.5,0) pos = CFrame.new(pos.X,pos.Y,pos.Z) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos end) tool.Parent = game.Players.LocalPlayer.Backpack
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "全(英文😭)",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/kEq7bdf9"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "地岩",
+
+	Callback = function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\98\98\97\109\120\98\98\97\109\120\98\98\97\109\120\47\99\111\100\101\115\112\97\99\101\115\45\98\108\97\110\107\47\109\97\105\110\47\37\69\55\37\57\57\37\66\68\34\41\41\40\41")()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "dx旧版本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DXuwu/test-lol/main/YO.lua"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本中心",
+
+	Callback = function()
+
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\103\101\109\120\72\119\65\49"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "无敌",
+
+	Callback = function()
+
+local lp = game:GetService "Players".LocalPlayer
+
+if lp.Character:FindFirstChild "Head" then
+
+    local char = lp.Character
+
+    char.Archivable = true
+
+    local new = char:Clone()
+
+    new.Parent = workspace
+
+    lp.Character = new
+
+    wait(2)
+
+    local oldhum = char:FindFirstChildWhichIsA "Humanoid"
+
+    local newhum = oldhum:Clone()
+
+    newhum.Parent = char
+
+    newhum.RequiresNeck = false
+
+    oldhum.Parent = nil
+
+    wait(2)
+
+    lp.Character = char
+
+    new:Destroy()
+
+    wait(1)
+
+    newhum:GetPropertyChangedSignal("Health"):Connect(
+
+        function()
+
+            if newhum.Health <= 0 then
+
+                oldhum.Parent = lp.Character
+
+                wait(1)
+
+                oldhum:Destroy()
+
+            end
+
+        end)
+
+    workspace.CurrentCamera.CameraSubject = char
+
+    if char:FindFirstChild "Animate" then
+
+        char.Animate.Disabled = true
+
+        wait(.1)
+
+        char.Animate.Disabled = false
+
+    end
+
+    lp.Character:FindFirstChild "Head":Destroy()
+
+end
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "甩飞别人",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "防止掉线（反挂机）",
+
+	Callback = function()
+
+	print("Anti Afk On")
+
+		local vu = game:GetService("VirtualUser")
+
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		   wait(1)
+
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		end)
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "透视",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/MA8jhPWT'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "吸取全部玩家",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/hQSBGsw2'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "人物无敌",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/H3RLCWWZ'))()
+
+	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "隐身(E)",
+
+	Callback = function()
+
+	 loadstring(game:HttpGet('https://pastebin.com/raw/nwGEvkez'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "电脑键盘",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "飞车(E)(别人看到)",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/G3GnBCyC", true))()
+
+  	end    
+
+})
+
+Tab:AddTextbox({
+
+	Name = "跳跃高度",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end	 
+
+})
+
+Tab:AddTextbox({
+
+	Name = "重力设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Workspace.Gravity = Value
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "穿墙2",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    Noclip = true
+
+		    Stepped = game.RunService.Stepped:Connect(function()
+
+			    if Noclip == true then
+
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+
+                        if b.Name == game.Players.LocalPlayer.Name then
+
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+
+                                if v:IsA("BasePart") then
+
+                                    v.CanCollide = false
+
+                                end
+
+                            end
+
+                        end
+
+                    end
+
+			    else
+
+				    Stepped:Disconnect()
+
+			    end
+
+		    end)
+
+	    else
+
+		    Noclip = false
+
+	    end
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "夜视",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+
+		else
+
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+
+		end
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "鼠标（手机非常不建议用）",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://pastefy.ga/V75mqzaz/raw'),true))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "飞行",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://pastebin.com/raw/U27yQRxS'))()
+
+	end 
+
+})
+
+Tab:AddButton({
+
+	Name = "跟踪玩家",
+
+	Callback = function()
+
+      	loadstring(game:HttpGet("https://pastebin.com/raw/F9PNLcXk"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "伪名说话",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://pastefy.ga/zCFEwaYq/raw'),true))()
+
+	end 
+
+})
+
+Tab:AddButton({
+
+	Name = "踏空行走",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "透视",
+
+	Callback = function()
+
+loadstring(game:GetObjects("rbxassetid://10092697033")[1].Source)()
+
+	end 
+
+})
+
+Tab:AddButton({
+
+	Name = "转起来",
+
+	Callback = function()
+
+      	loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "隐身(E)",
+
+	Callback = function()
+
+	 loadstring(game:HttpGet('https://pastebin.com/raw/nwGEvkez'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+    Name="立即死亡",
+
+    Callback=function()
+
+        game.Players.LocalPlayer.Character.Humanoid.Health=0
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "黑客脚本",
+
+	Callback = function()
+
+loadstring(game: HttpGet("https://raw.githubusercontent.com/BirthScripts/Scripts/main/c00l.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "管理员",
+
+	Callback = function()
+
+loadstring(game: HttpGet(('https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua'),true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+    Name="回满血后分服务器可能不可以能用",
+
+    Callback=function()
+
+        game.Players.LocalPlayer.Character.Humanoid.Health=10000
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "键盘",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+    Name="玩家动作",
+
+    Callback=function()
+
+        getgenv().she="作者小盛蓝免费请勿倒卖"
+
+loadstring(game:HttpGet("https://pastebin.com/raw/Zj4NnKs6"))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "doors",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "DX夜",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DXuwu/test-lol/main/YO.lua"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "超级脚本",
+
+	Callback = function()
+
+loadstring(game: HttpGet("https://raw.githubusercontent.com/Fazedrab/EntitySpawner/main/doors(orionlib).lua"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "修改",
+
+	Callback = function()
+
+loadstring(game:HttpGet"https://raw.githubusercontent.com/sponguss/Doors-Entity-Replicator/main/source.lua")()
+
+	end
+
+})
+
+Tab:AddButton({
+
+    Name="微山doors",
+
+    Callback=function()
+
+        --微山doors 2.3.2(愚人节快乐)
+
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\117\72\72\112\56\102\122\83"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+    Name="ms要白名单",
+
+    Callback=function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+    Name="我的",
+
+    Callback=function()
+
+        loadstring(game:HttpGet("https://pastebin.com/raw/QsCas0t3"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+    Name="云doors",
+
+    Callback=function()
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/EntitySpawner/main/doors(orionlib).lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "最不强",
+
+	Callback = function()
+
+     loadstring(game:HttpGet(('https://pastebin.com/raw/R8QMbhzv')))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+    Name="白",
+
+    Callback=function()
+
+        _G["白脚本作者修狗"]="xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey"loadstring(game:HttpGet(('https://raw.githubusercontent.com/wev666666/baijiaobengV2.0beta/main/%E7%99%BD%E8%84%9A%E6%9C%ACbeta'),true))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "忍者传奇",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+    Name="操你妈不知道",
+
+    Callback=function()
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/1"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "忍者传奇",
+
+	Callback = function()
+
+pcall(loadstring(game:HttpGet("https://pastebin.com/raw/2UjrXwTV")))
+
+end
+
+})
+
+Tab:AddButton({
+
+    Name="不知道",
+
+    Callback=function()
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/5repo/main/script4.lua"))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "极速传奇",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+    Name="青脚本",
+
+    Callback=function()
+
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/kkaaccnnbb/money/main/fix'))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本二",
+
+	Callback = function()
+
+loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\98\111\121\115\99\112\47\98\101\116\97\47\109\97\105\110\47\37\69\57\37\56\48\37\57\70\37\69\53\37\66\65\37\65\54\37\69\55\37\56\50\37\66\56\37\69\56\37\66\53\37\66\55\46\108\117\97'))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本三",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "剑客v3——roblox加入群主剑客才可用",
+
+	Callback = function()
+
+jianke_V3 = "作者_初夏"jianke = "剑客QQ群347724155"loadstring(game:HttpGet(('https://raw.githubusercontent.com/jiankeQWQ/jiankeV3/main/jianke_V3')))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "鲨口求生2",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddDropdown({
+
+	Name = "免费船只",
+
+	Default = "1",
+
+	Options = {"DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine",  "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
+
+	Callback = function(Value)
+
+local ohString1 = (Value)
+
+game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
+
+	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "自动杀鲨鱼🦈",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "能量突击",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "能量突击",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Harley-HUB/Energy-Assault/main/Ene", true))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "汽车经销大亨",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "英文版",
+
+	Callback = function()
+
+pcall(function()
+    repeat wait() until game:IsLoaded()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/03sAlt/BlueLockSeason2/main/README.md"))()
+end)
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "FE脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "C00lgui",
+
+	Callback = function()
+
+     loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "1x1x1x1",
+
+	Callback = function()
+
+     loadstring(game:HttpGet(('https://pastebin.com/raw/JipYNCht'),true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "动画中心",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "幽灵中心",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "蜘蛛侠爬墙配合键盘脚本按c",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://pastebin.com/raw/2X0hKUgq'),true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "铁拳打死你",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "声音播放器",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/GEianeKX"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "NA管理员",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "By手腕",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "掰手腕",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/99d16edc79729a038994f85ce7335971.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本2——Key:ScriptJezz",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZhenX201/FE-Infinite-Money-All-Stats/main/source"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "无卡",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KrzysztofHub/script/main/loader.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "无卡",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zicus-scripts/SkullHub/main/Loader.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "无卡",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/wrestle2/main/armsim"))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "力量传奇",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+    Name="修改力量",
+
+    Callback=function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "力量传奇Muscle Legend",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+    Name="力量传奇",
+
+    Callback=function()
+
+        loadstring(game:GetObjects("rbxassetid://10048914323")[1].Source)()
+
+    end
+})
+
+Tab:AddButton({
+
+	Name = "杯脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zuohongjian/bjb/main/llcq"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "剑客v3——roblox加入群组剑客才可用",
+
+	Callback = function()
+
+jianke_V3 = "作者_初夏"jianke = "剑客QQ群347724155"loadstring(game:HttpGet(('https://raw.githubusercontent.com/jiankeQWQ/jiankeV3/main/jianke_V3')))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "彩虹朋友",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+    Name="彩虹朋友",
+
+    Callback=function()
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Sempiller/RainbowTool/main/Turkish.lua'))();
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "彩虹朋友2",	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Rainbow-Friends/main/Rainbow%20Friends"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "模仿者",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ttjy9808/THEMIMICNEWMOBILEUINOTBETA/main/README.md"))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "挂工厂",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "剑客v3——roblox加入群组剑客才可用",
+
+	Callback = function()
+
+jianke_V3 = "作者_初夏"jianke = "剑客QQ群347724155"loadstring(game:HttpGet(('https://raw.githubusercontent.com/jiankeQWQ/jiankeV3/main/jianke_V3')))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "兵工厂",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init'), true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "水下世界_白名单已被破",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/jiankeQWQ/Fish/main/sx')))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "大闹监狱（监狱人生）",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "过于牛逼，谁用谁孤儿的管理员",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Script'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "新菜单",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/LiverMods/xRawnder/main/HubMoblie'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "v1.3",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "战争大亨",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本1",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ufouzzed/WarTycoon/main/ByJMaxeyy"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本二",
+
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0wartycoon", true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本三",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nivex123456/War-Tycoon/main/Script"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "剑客v3——roblox加入群组剑客才可用",
+
+	Callback = function()
+
+jianke_V3 = "作者_初夏"jianke = "剑客QQ群347724155"loadstring(game:HttpGet(('https://raw.githubusercontent.com/jiankeQWQ/jiankeV3/main/jianke_V3')))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "自然灾害模拟器",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "自然灾害模拟器",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/7c75386107937fa006304efd24543ad4/raw/8d759dfcd95d39949c692735cfdf62baec0bf835/cafwetweg", true))() 
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "自然灾害",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main'))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "代木大亨",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "伐木大亨",
+
+	Callback = function()
+
+-- Join to Discord : https://discord.gg/nightfallgui
+
+loadstring(game:HttpGet('https://gist.githubusercontent.com/ItsEcstasy/327b705029ed89fd1be0f8382b3fb04f/raw/07c7beb24aebec0a26f4622c92b593428811db4d/Nightfall1.7-Temp'))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "青脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/kkaaccnnbb/money/main/fix'))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "动感星期五",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "script一",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay'))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "各大脚本",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "☁脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/LOL/main/%E4%BA%91%E8%84%9A%E6%9C%ACCloud%20script.lua", true))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+    Name="XC卡密:w",
+
+    Callback=function()
+
+        getgenv().XC="作者XC"
+
+loadstring(game:HttpGet("https://pastebin.com/raw/PAFzYx0F"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+    Name="龙脚本",
+
+    Callback=function()
+
+        getgenv().long = "龙脚本，加载时间长请耐心"
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\108\121\121\97\105\110\105\47\108\111\110\47\109\97\105\110\47\108\105\115\119\109\34\41\41\40\41")()
+
+    end
+
+})
+
+Tab:AddButton({
+
+    Name="USA",
+
+    Callback=function()
+
+        getgenv().USA="作者USA免费请勿倒卖"
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/beta/main/USA.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "青脚本——支持很多游戏",
+
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/kkaaccnnbb/money/main/fix'))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "秋脚本",
+
+	Callback = function()
+
+local SCC_CharPool={
+[1]= tostring(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,87,83,56,53,55,57,54,48,47,45,47,109,97,105,110,47,37,69,55,37,65,55,37,56,66,37,67,50,37,66,55,37,69,56,37,56,55,37,65,65,37,69,53,37,56,56,37,66,54,37,69,56,37,56,52,37,57,65,37,69,54,37,57,67,37,65,67,37,69,54,37,57,54,37,66,48,37,69,54,37,66,65,37,57,48,37,69,55,37,65,48,37,56,49,46,116,120,116})end)()))}
+loadstring(game:HttpGet(SCC_CharPool[1]))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "冰脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/GR4ChWKv"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "剑客v3_roblox加入群组剑客才可用",
+
+	Callback = function()
+
+jianke_V3 = "作者_初夏"jianke = "剑客QQ群347724155"loadstring(game:HttpGet(('https://raw.githubusercontent.com/jiankeQWQ/jiankeV3/main/jianke_V3')))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "鲨脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sharksharksharkshark/shark-shark-shark-shark-shark/main/shark-scriptlollol.txt",true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "水下世界支持很多游戏_名单已被破除",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/jiankeQWQ/Fish/main/sx')))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "怀脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zuohongjian/bjb/main/bjb"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "EZ Hub 150+",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "客户端中心",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ObviouslyOrchi/Moonlight_Client.lua/main/Universal",true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "作弊中心",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mrgunz/UnnamedCheat/main/Loader"))();
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "阿斯顿中心",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本中心3卡密—released",
+
+	Callback = function()
+
+-- DISCORD: https://discord.gg/8YZMwfYaNqgetgenv().key = "JOIN DISCORD FOR KEY";loadstring(game:HttpGet("https://raw.githubusercontent.com/Ner0ox/sexy-script-hub/main/Loader.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本中心外网",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TakeModzz/Games-Hub-Script/main/Games%20Hub%20(Always%20updated)"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "Every day中心",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KATERGaming/Roblox/main/KaterHub.Lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "移动中心",
+
+	Callback = function()
+
+loadstring(game:HttpGetAsync("https://shz.al/~mobile-hub-v2"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本中心另一版本",
+
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fgasfga/SCRIPT-HUB/main/Hello.lua", true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "140+中心",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "DOORS",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "门",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://github.com/DocYogurt/free/raw/main/long"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "不坤到什么名字",
+
+	Callback = function()
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "穿墙(无拉回)",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://github.com/DXuwu/OK/raw/main/clip"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "手电筒（没电会有bug）",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Normal%20Flashlight"))()
+
+    end
+
+}) 
+
+Tab:AddButton({
+
+	Name = "神圣炸弹（清岩提供）",
+
+    Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/HolyGrenadeByNerd.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "十字架",
+
+    Callback = function()
+
+loadstring(game:HttpGet('https://gist.githubusercontent.com/C00LBOZO/0c78ad8c74ca26324c87ede16ce8b387/raw/c0887ac0d24fde80bea11ab1a6a696ec296af272/Crucifix'))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "变身(阿巴怪提供)",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))();
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "微山2.3.2(依旧是阿巴怪提供)",
+
+	Callback = function()
+
+--微山doors 2.3.2(愚人节快乐)
+
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\117\72\72\112\56\102\122\83"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "飞行",
+
+		Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/gqv7PXAa"))()
+
+	end
+
+})    
+
+Tab:AddButton({
+
+	Name = "键盘",
+
+		Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+	end
+
+})    
+
+Tab:AddButton({
+
+	Name = "吸铁石",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/MagnetByNerd.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "剪刀",
+
+	Callback = function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/shears_done.lua"))()
+
+    end
+
+})    
+
+Tab:AddButton({
+
+	Name = "激光枪",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Laser%20Gun"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "能量罐（清岩提供）",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/nengliangtiao"))()
+
+    end
+
+})   
+
+Tab:AddButton({
+
+	Name = "紫色手电筒（在电梯购买东西的时候使用）",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Purple%20Flashlight"))()
+
+    end
+
+})  
+
+local Tab = Window:MakeTab({
+
+	Name = "脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "青蛙",
+
+	Callback = function()
+
+getgenv().eom = "青蛙"
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\39\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\68\122\120\115\81\82\68\85\39\41\41\40\41")()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "地岩",
+
+	Callback = function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\98\98\97\109\120\98\98\97\109\120\98\98\97\109\120\47\99\111\100\101\115\112\97\99\101\115\45\98\108\97\110\107\47\109\97\105\110\47\37\69\55\37\57\57\37\66\68\34\41\41\40\41")()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "ato",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/atoyayaya/jiaoben/main/jiamilist"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "龙",
+
+	Callback = function()
+
+loadstring(game:HttpGet "https://pastebin.com/raw/bXApbsu8")()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "云脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/UWU/main/Xiaos______________________________________________________________Yun__________________________________________________________________________betaV2.3------------------------------------------------------------------------------------jsjalololololololololololololololololololllololol.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+  Name = "USA（卡密：USA AER）",
+
+  Callback = function()
+
+    getgenv().USA="作者莫羽免费请勿倒卖"loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/beta/main/USA.lua"))()
+
+   end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "游戏脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "自动刷金条(造船寻宝)",	
+
+Callback = function()	loadstring(game:HttpGet("https://pastebin.com/raw/Lyy77rnr",true))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "巴掌模拟器",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
+
+    end
+
+})
+
+Tab:AddDropdown({
+
+	Name = "选择你的免费船(鲨鱼)",
+
+	Default = "1",
+
+	Options = {"无", "DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine", "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
+
+	Callback = function(Value)
+
+local ohString1 = (Value)
+
+game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
+
+	end 
+
+})
+
+Tab:AddButton({
+
+	Name = "自动杀鲨鱼🦈(鲨鱼)",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "动画星期五",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "宠物模拟器X",
+
+	Callback = function()
+
+     loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "蜂群模拟器",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/3A61hnGA", true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "Evade",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Evade/main.lua"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "后室",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/Gsqd40fL'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "Synapse X",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/tWGxhNq0"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "彩虹朋友",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Rainbow-Friends/main/Rainbow%20Friends"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "HoHo",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "tds查看兵",
+
+	Callback = function()
+
+     local Towers = game:GetService("Players").LocalPlayer.PlayerGui.Interface.Root.Inventory.View.Frame.Frame.Frame
+
+ 
+
+for _, v in pairs(Towers:GetDescendants()) do
+
+	if v:IsA("ImageButton") then
+
+        v.Visible = true
+
+	end
+
+end
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "通用",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({	
+
+Name = "工具包",	
+
+Callback = function()	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()	  	
+
+     end
+
+})
+
+Tab:AddButton({
+
+	Name = "透视",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/MA8jhPWT'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "飞车",
+
+	Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "甩飞",
+
+	Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "无限跳",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "FE脚本🌚",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "C00lgui",
+
+	Callback = function()
+
+   loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "1x1x1x1",
+
+	Callback = function()
+
+     loadstring(game:HttpGet(('https://pastebin.com/raw/JipYNCht'),true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "变玩家（R6）",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/XR4sGcgJ"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "动画中心",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "脚本作者小云",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本doors",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/whXp1Ca2"))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+  Name = "DOORS娱乐十字架(只对自己召唤的怪有用)",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "刷怪菜单",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shuaguai"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+	Name = "DOORS变身脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))();
+
+end
+
+}) 
+
+Tab:AddButton({
+
+  Name = "耶稣十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizi2"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "紫光十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizi3"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "万圣节十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizi4"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "普通十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizizhen"))()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "造船寻宝",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+local Section = Tab:AddSection({
+
+	Name = "付费功能"
+
+})
+
+Tab:AddButton({
+
+	Name = "自动刷金条",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://pastebin.com/raw/Lyy77rnr",true))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "工具包",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()	
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "防止掉线（反挂机）",
+
+	Callback = function()
+
+	print("Anti Afk On")
+
+		local vu = game:GetService("VirtualUser")
+
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		   wait(1)
+
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		end)
+
+  	end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "监狱人生",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "PRISONWARE V1.3",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "警卫室",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(847.7261352539062, 98.95999908447266, 2267.387451171875)
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "监狱室内",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(919.2575073242188, 98.95999908447266, 2379.74169921875)
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "罪犯复活点",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-937.5891723632812, 93.09876251220703, 2063.031982421875)
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "监狱室外",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(760.6033325195312, 96.96992492675781, 2475.405029296875)
+
+  	end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "鲨口求生2",	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddDropdown({
+
+	Name = "免费船只",
+
+	Default = "1",
+
+	Options = {"DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine",  "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
+
+	Callback = function(Value)
+
+local ohString1 = (Value)
+
+game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
+
+	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "自动杀鲨鱼🦈",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "FE脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "C00lgui",
+
+	Callback = function()
+
+     loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "1x1x1x1",
+
+	Callback = function()
+
+     loadstring(game:HttpGet(('https://pastebin.com/raw/JipYNCht'),true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "动画中心",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "通用",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+      Name = "阿尔宙斯V3.0 UI",
+
+      Callback = function()
+
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+
+      end
+
+})
+
+ 
+
+ Tab:AddButton({
+
+  Name = "HUA 光影",
+
+  Callback = function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/arzRCgwS"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "光影_2",
+
+  Default = false,
+
+  Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "美丽天空",
+
+  Callback = function()
+
+    -- Roblox Graphics Enhancher
+
+    local light = game.Lighting
+
+    for i, v in pairs(light:GetChildren()) do
+
+      v:Destroy()
+
+    end
+
+    local ter = workspace.Terrain
+
+    local color = Instance.new("ColorCorrectionEffect")
+
+    local bloom = Instance.new("BloomEffect")
+
+    local sun = Instance.new("SunRaysEffect")
+
+    local blur = Inst
+
+  end
+
+})
+
+Tab:AddButton({
+
+	Name = "超高画质",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
+
+end
+
+})    
+
+Tab:AddButton({
+
+  Name = "旋转",
+
+  Callback = function()
+
+    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+
+  end
+
+})
+
+Tab:AddToggle({
+
+	Name = "夜视",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+
+		else
+
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+
+		end
+
+	end
+
+})
+
+ 
+
+Tab:AddButton({
+
+	Name = "飞车",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "爬墙",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "电脑键盘",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "踏空行走",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "防止掉线（反挂机）",
+
+	Callback = function()
+
+	print("Anti Afk On")
+
+		local vu = game:GetService("VirtualUser")
+
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		   wait(1)
+
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		end)
+
+  	end
+
+})
+
+local player = Window:MakeTab({
+
+	Name = "玩家",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddTextbox({
+
+	Name = "重力设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Workspace.Gravity = Value
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "隐身(E)",
+
+	Callback = function()
+
+	 loadstring(game:HttpGet('https://pastebin.com/raw/nwGEvkez'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "无限跳",
+
+    Default = false,
+
+	Callback = function(Value)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+
+	end
+
+})
+
+player:AddTextbox({
+
+	Name = "移动速度",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end
+
+})
+
+player:AddTextbox({
+
+	Name = "跳跃高度",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end
+
+})
+
+player:AddButton({
+
+	Name = "穿墙",
+
+	Callback = function()
+
+      	loadstring(game:HttpGet("https://pastebin.com/raw/jvyN5hT8"))()
+
+  	end
+
+})
+
+player:AddButton({
+
+	Name = "飞行",
+
+	Callback = function()
+
+      	loadstring(game:HttpGet("https://pastebin.com/raw/U27yQRxS"))()
+
+  	end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "伐木脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "先点键盘，再点这个",
+
+	Callback = function()
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/butter-hub/main/butters%20recode-obfuscated.lua'))("Apple is cute")
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "免费白脚本",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudX-ScriptsWane/ScriptsDache/main/%E4%BC%90%E6%9C%A8%E5%A4%A7%E4%BA%A822.lua", true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+      Name = "小云bark2.0",
+
+      Callback = function()
+
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/UWU/main/bark2.0.lua"))()
+
+      end
+
+      })
+
+local Tab = Window:MakeTab({
+
+    Name = "DOORS",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "微山DOORS",
+
+	Callback = function()
+
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\117\72\72\112\56\102\122\83"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "kingHub(已更新)",
+
+	Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKing%20Doors%20Mobile"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+  Name = "门绘图显示",
+
+  Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/doors1"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+	Name = "手电筒（没电会有bug）",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Normal%20Flashlight"))()
+
+end
+
+})      
+
+Tab:AddButton({
+
+  Name = "DOORS低回拉穿墙",
+
+  Callback = function()
+
+    loadstring(game:HttpGet("https://github.com/DXuwu/OK/raw/main/clip"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "刷怪菜单",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shuaguai"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+	Name = "DOORS变身脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))();
+
+end
+
+}) 
+
+Tab:AddButton({
+
+	Name = "不可能模式",
+
+	Callback = function()
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ukazix/impossible-mode/main/Protected_79.lua.txt'))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "Endless模式",
+
+	Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/Script.lua"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "物品复制枪",
+
+	Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/EverythingGunByNeRD.lua"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "控制物品大小枪",
+
+	Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/SizeChangerByNerd.lua"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "香蕉枪(可在困难模式发射香蕉)",
+
+	Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/BananaGunByNerd.lua"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "手持臭猫",
+
+	Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Maxwell%20Plushie"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "磁铁",
+
+	Callback = function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/MagnetByNerd.lua"))()
+
+  	end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "极速传奇",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "开启卡宠",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()		
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "自动重生和自动刷等级",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://pastebin.com/raw/AyeCYbT6"))()        
+
+  	end    
+
+})
+
+local Section = Tab:AddSection({
+
+	Name = "传送岛屿"
+
+})
+
+Tab:AddButton({
+
+	Name = "返还出生岛",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9682.98828125, 58.87917709350586, 3099.033935546875)      
+
+	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "白雪城",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9676.138671875, 58.87917709350586, 3782.69384765625)   end    
+
+})
+
+Tab:AddButton({
+
+	Name = "熔岩城",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11054.96875, 216.83917236328125, 4898.62841796875)       
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "传奇公路",
+
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13098.87109375, 216.83917236328125, 5907.6279296875)    end    
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "俄亥俄州",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "俄亥俄州",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/hkvHeHed",true))()
+
+end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "蜂群模拟器",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "修勾的蜂群",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://rahttps://rahttps://raw.githubusercontent.com/USA868/USA--/main/.github/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/1%E6%9D%96%E4%BA%BA%E4%BD%BF%E7%94%A8?token=GHSAT0AAAAAACB6LLQWA5JNQNNWTP47AOWSZCLYRTQ"))()
+
+end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "幸运方块",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "HUA 幸运方块",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/QS5CcYdU"))()
+
+end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "MM2",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "HUA MM2",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/A6z5Ba66"))()
+
+end
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "忍者传奇",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动挥舞",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autoswing = x
+
+            if autoswing then
+
+                swinging()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动售卖",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autosell = x
+
+            if autosell then
+
+                selling()
+
+            end
+
+        end
+
+    }
+
+)
+
+    
+
+Tab:AddToggle(
+
+    {
+
+        Name = "存满了自动售卖",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autosellmax = x
+
+            if autosellmax then
+
+                maxsell()
+
+            end
+
+        end
+
+    }
+
+)
+
+local Section = Tab:AddSection({
+
+	Name = "自动购买功能"
+
+})
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买剑",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyswords = x
+
+            if autobuyswords then
+
+                buyswords()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买腰带",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuybelts = x
+
+            if autobuybelts then
+
+                buybelts()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买称号（等级）",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyranks = x
+
+            if autobuyranks then
+
+                buyranks()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买忍术",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyskill = x
+
+            if autobuyskill then
+
+                buyskill()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买（全部打开就行）",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyshurikens = x
+
+            if autobuyshurikens then
+
+                buyshurikens()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddButton(
+
+    {
+
+        Name = "解锁所有岛",
+
+        Callback = function()
+
+            for _, v in next, game.workspace.islandUnlockParts:GetChildren() do
+
+                if v then
+
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.islandSignPart.CFrame
+
+                    wait(.5)
+
+                end
+
+            end
+
+        end
+
+    }
+
+)
+
+local Tab = Window:MakeTab({
+
+  Name = "通用脚本",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+  })
+
+  
+
+ Tab:AddButton({
+
+	Name = "飞行",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://rentry.co/shadiao_yazifly/raw'))()
+
+end
+
+})
+
+Tab:AddTextbox({
+
+	Name = "移动速度",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end	 
+
+})
+
+ Tab:AddTextbox({
+
+	Name = "跳跃高度",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end	 
+
+})
+
+Tab:AddTextbox({
+
+	Name = "最大血量",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Value
+
+	end	 
+
+})
+
+Tab:AddTextbox({
+
+	Name = "当前血量",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.Health = Value
+
+	end	 
+
+})
+
+Tab:AddTextbox({
+
+	Name = "重力设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Workspace.Gravity = Value
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "修改玩家碰撞箱",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://rentry.co/aaaaaaaaaduckduck/raw'))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "粘墙行走",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+
+end
+
+})
+
+Tab:AddToggle({
+
+	Name = "夜视",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+
+		else
+
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+
+		end
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "穿墙",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    Noclip = true
+
+		    Stepped = game.RunService.Stepped:Connect(function()
+
+			    if Noclip == true then
+
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+
+                        if b.Name == game.Players.LocalPlayer.Name then
+
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+
+                                if v:IsA("BasePart") then
+
+                                    v.CanCollide = false
+
+                                end
+
+                            end
+
+                        end
+
+                    end
+
+			    else
+
+				    Stepped:Disconnect()
+
+			    end
+
+		    end)
+
+	    else
+
+		    Noclip = false
+
+	    end
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "转起来",
+
+	Callback = function()
+
+      	loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "转圈fling GUI",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "锁定fling",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Best-Target-Fling-10816"))()
+
+end
+
+})
+
+local Tab = Window:MakeTab({
+
+  Name = "极速传奇",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+  })
+
+  
+
+  Tab:AddButton({
+
+	Name = "极速传奇",	Callback = function()
+
+      	loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\98\111\121\115\99\112\47\98\101\116\97\47\109\97\105\110\47\37\69\57\37\56\48\37\57\70\37\69\53\37\66\65\37\65\54\37\69\55\37\56\50\37\66\56\37\69\56\37\66\53\37\66\55\46\108\117\97'))()
+
+  	end
+
+})
+
+local Tab = Window:MakeTab({
+
+  Name = "脚本中心",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+  })
+
+  
+
+Tab:AddButton({
+
+	Name = "脚本中心",
+
+	Callback = function()
+
+  loadstring(game:HttpGet("https://pastebin.com/raw/De4aYHDY"))()
+
+  	end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "DOORS",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "神光脚本",
+
+	Callback = function()
+
+  _G["神光脚本作者TA"]="xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey"loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,109,119,48,112,102,69,70,77})end)())))()--神光
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "面包脚本",
+
+	Callback = function()
+
+  _G["面包脚本作者TA"]="xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey"loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,109,119,48,112,102,69,70,77})end)())))()--神光
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "Ohio doors",
+
+	Callback = function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/rxn-xyz/Ohio./main/Ohio.lua",true))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "云doors",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/UWU/main/hsjakajaaa.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "吸铁石",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/MagnetByNerd.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "剪刀",
+
+	Callback = function()
+
+   
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/shears_done.lua"))()
+
+    end
+
+})    
+
+Tab:AddButton({
+
+	Name = "激光枪",
+
+	Callback = function()
+
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Laser%20Gun"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "夜视仪",
+
+	Callback = function()
+
+   
+
+  _G.OnShop = trueloadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+
+    end
+
+})    
+
+Tab:AddButton({
+
+	Name = "最强",
+
+	Callback = function()
+
+   loadstring(game:HttpGet('https://pastebin.com/raw/R8QMbhzv'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "十字架",
+
+	Callback = function()
+
+   
+
+loadstring(game:HttpGet('https://pastebin.com/raw/ibbWwU6q'))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "能量罐（清岩提供）",
+
+	Callback = function()  
+
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/nengliangtiao"))()
+
+    end
+
+})   
+
+Tab:AddButton({
+
+	Name = "紫色手电筒（在电梯购买东西的时候使用）",
+
+	Callback = function()
+
+   
+
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Purple%20Flashlight"))()
+
+    end
+
+})  
+
+local Tab = Window:MakeTab({
+
+  Name = "国王遗产",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+  })
+
+Tab:AddButton({
+
+	Name = "trick",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Strikehubv2z/StormSKz/main/All_in_one"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "ipper hub",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/King%20Leagacy"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "Xenon Hub",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/legacy"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "lack",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "yper hub",
+
+	Callback = function()
+
+repeat wait() until game:IsLoaded()loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))() 
+
+end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "青蛙",
+
+	Callback = function()
+
+   
+
+getgenv().eom = "青蛙"
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\39\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\68\122\120\115\81\82\68\85\39\41\41\40\41")()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "地岩",
+
+	Callback = function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\98\98\97\109\120\98\98\97\109\120\98\98\97\109\120\47\99\111\100\101\115\112\97\99\101\115\45\98\108\97\110\107\47\109\97\105\110\47\37\69\55\37\57\57\37\66\68\34\41\41\40\41")()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "ato",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/atoyayaya/jiaoben/main/jiamilist"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "龙",
+
+	Callback = function()
+
+loadstring(game:HttpGet "https://pastebin.com/raw/bXApbsu8")()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "云脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/UWU/main/Xiaos______________________________________________________________Yun__________________________________________________________________________betaV2.3------------------------------------------------------------------------------------jsjalololololololololololololololololololllololol.lua"))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+  Name = "USA（卡密：USA AER）",
+
+  Callback = function()
+
+    getgenv().USA="作者莫羽免费请勿倒卖"loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/beta/main/USA.lua"))()
+
+   end
+
+})local Tab = Window:MakeTab({
+
+	Name = "脚本大全",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "自动刷金条(造船寻宝)",	
+
+Callback = function()	loadstring(game:HttpGet("https://pastebin.com/raw/Lyy77rnr",true))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "巴掌模拟器",
+
+	Callback = function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
+
+    end
+
+})
+
+Tab:AddButton({
+
+	Name = "Blox Fruit",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv2BETA"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "一路向西",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/pHN96bvq"))()
+
+end
+
+})
+
+Tab:AddButton({
+
+	Name = "力量传奇",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+  Name = "鲨口求生2",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+  })
+
+  
+
+Tab:AddDropdown({
+
+	Name = "选择你的免费船(鲨2)",
+
+	Default = "1",
+
+	Options = {"无", "DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine", "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
+
+	Callback = function(Value)
+
+local ohString1 = (Value)
+
+game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
+
+	end 
+
+})
+
+Tab:AddButton({
+
+	Name = "自动杀鲨鱼（鲨2）",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+  Name = "脚本大全2",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+  })
+
+  
+
+Tab:AddButton({
+
+	Name = "动感星期五",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "宠物模拟器X",
+
+	Callback = function()
+
+     loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "蜂群模拟器",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/3A61hnGA", true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "Evade",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Evade/main.lua"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "后室",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/Gsqd40fL'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "Synapse X",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/tWGxhNq0"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "彩虹朋友",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Rainbow-Friends/main/Rainbow%20Friends"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "HoHo blox fruit",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "tds查看兵",
+
+	Callback = function()
+
+     local Towers = game:GetService("Players").LocalPlayer.PlayerGui.Interface.Root.Inventory.View.Frame.Frame.Frame
+
+ 
+
+for _, v in pairs(Towers:GetDescendants()) do
+
+	if v:IsA("ImageButton") then
+
+        v.Visible = true
+
+	end
+
+end
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "通用2",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({	
+
+Name = "工具包",	
+
+Callback = function()	loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()	  	
+
+     end
+
+})
+
+Tab:AddButton({
+
+	Name = "透视",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/MA8jhPWT'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "飞车",
+
+	Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "甩飞",
+
+	Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "无限跳",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+
+    end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "FE脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "C00lgui",
+
+	Callback = function()
+
+   loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "1x1x1x1",
+
+	Callback = function()
+
+     loadstring(game:HttpGet(('https://pastebin.com/raw/JipYNCht'),true))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "变玩家（R6）",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/XR4sGcgJ"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "动画中心",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "doors2",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "脚本doors",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/whXp1Ca2"))()
+
+  	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+  Name = "DOORS娱乐十字架(只对自己召唤的怪有用)",
+
+  Icon = "rbxassetid://4483345998",
+
+  PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "刷怪菜单",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shuaguai"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+	Name = "DOORS变身脚本",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))();
+
+end
+
+}) 
+
+Tab:AddButton({
+
+  Name = "耶稣十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizi2"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "紫光十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizi3"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "万圣节十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizi4"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "普通十字架",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/shizizhen"))()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "水下世界",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "水下世界卡密xiaoxiaoyu",
+
+	Callback = function()
+
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\52\118\53\110\55\110\47\108\108\108\108\108\108\108\108\108\108\108\108\108\108\108\108\108\108\108\108\108\47\109\97\105\110\47\85\110\100\101\114\119\97\116\101\114\37\50\48\119\111\114\108\100\46\108\117\97\34\41\41\40\41\10")()
+
+  end
+
+})
+
+  wait(3) --等待三秒
+  --你的脚本
+    else --验证失败执行↓
+setclipboard("没有")
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "验证失败",
+    Text = "你并没有加入白名单",
+    Duration = 10, --时间
+})
+game.Players.LocalPlayer:Kick(a.."你没有被列入白名单，请购买或者找群主反馈群主QQ3491629303")
+end
