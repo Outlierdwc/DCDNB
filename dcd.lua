@@ -8,25 +8,25 @@ CoreGui:SetCore("SendNotification", {
 
 local a=tostring(game.Players.LocalPlayer.Character);
 
-if a=="无名"then
-_G.she=true
-elseif a=="zhengxiaodou"then
-_G.she=true
-elseif a=="catwithfiv"then
-_G.she=true
-elseif a=="sjqgduf2"then
-_G.she=true
-elseif a=="reretwyv"then
-_G.she=true
-elseif a=="cat"then
-_G.she=true
-elseif a=="DT_1x1x1x1x1"then
+if a=="nsjxjcn"then
 _G.she=true
 elseif a=="无名"then
 _G.she=true
 elseif a=="无名"then
 _G.she=true
-elseif a=="098765dd4"then
+elseif a=="无名"then
+_G.she=true
+elseif a=="无名v"then
+_G.she=true
+elseif a=="无名"then
+_G.she=true
+elseif a=="无名"then
+_G.she=true
+elseif a=="无名"then
+_G.she=true
+elseif a=="无名"then
+_G.she=true
+elseif a=="无名4"then
 _G.she=true
 end
 if _G.she==true then
@@ -81,17 +81,18 @@ local function HeartbeatUpdate()
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-local Window = OrionLib:MakeWindow({Name = "小达中心", HidePremium = false, SaveConfig = true,IntroText = "小达脚本", ConfigFolder = "小达脚本"})
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "小达脚本"; Text ="小达脚本"; Duration = 4; })
+local Window = OrionLib:MakeWindow({Name = "DC中心", HidePremium = false, SaveConfig = true,IntroText = "DC脚本", ConfigFolder = "DC脚本"})
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "DC脚本"; Text ="DC脚本"; Duration = 4; })
 
 local about = Window:MakeTab({
-    Name = "小达制作",
+    Name = "Anson制作",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 about:AddParagraph("脚本为收费脚本 请勿去二改")
 about:AddParagraph("禁止被圈")
+about:AddParagraph("^_^")
 
 local Tab =Window:MakeTab({
 	Name = "公告",
@@ -102,20 +103,20 @@ local Tab =Window:MakeTab({
 Tab:AddButton({
 	Name = "复制作者QQ",
 	Callback = function()
-     setclipboard("sjqgduf2")
+     setclipboard("1330963275")
   	end
 })
 
 Tab:AddButton({
 	Name = "复制QQ群",
 	Callback = function()
-     setclipboard("809565207")
+     setclipboard("993864164")
   	end
 })
 
 OrionLib:MakeNotification({
-	Name = "小达脚本",
-	Content = "欢迎使用小达脚本",
+	Name = "DC脚本",
+	Content = "欢迎使用DC",
 	Image = "rbxassetid://4483345998",
 	Time = 2
 
@@ -4934,5 +4935,5 @@ CoreGui:SetCore("SendNotification", {
     Text = "你并没有加入白名单",
     Duration = 10, --时间
 })
-game.Players.LocalPlayer:Kick(a.."你没有被列入白名单，请购买或者找群主反馈群主QQ3491629303")
+game.Players.LocalPlayer:Kick(a.."你没有被列入白名单，请你去购买，QQ1330963275")
 end
