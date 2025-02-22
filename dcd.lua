@@ -92,6 +92,8 @@ local about = Window:MakeTab({
 
 about:AddParagraph("脚本为收费脚本 请勿去二改")
 about:AddParagraph("禁止被圈")
+about:AddParagraph("测试版本")
+about:AddParagraph("未发布")
 about:AddParagraph("^_^")
 
 local Tab =Window:MakeTab({
