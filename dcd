@@ -69,7 +69,7 @@ OrionLib:MakeNotification({
     wait(1)
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-local Window = OrionLib:MakeWindow({Name = "DC中心1.6", HidePremium = false, SaveConfig =true,IntroText="DC中心1.6", ConfigFolder = "DC中心"})
+local Window = OrionLib:MakeWindow({Name = "DC中心1.0", HidePremium = false, SaveConfig =true,IntroText="DC中心1.6", ConfigFolder = "DC中心"})
 local Tab = Window:MakeTab({
 	Name = "主页",
 	Icon = "rbxassetid://4483345998",
