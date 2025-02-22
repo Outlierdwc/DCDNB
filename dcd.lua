@@ -1674,35 +1674,6 @@ Tab:AddToggle({
    end
 })
 
-while wait() do
-		if _G.autofarm == true then
-            task.wait(0.025)
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1041.84729, 24.021759, 410.903748, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-            task.wait(0.03)
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1041.06726, 16.3217564, 412.603729, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-			task.wait(0.17)
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-737.947266, 24.021759, 238.003754, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-            task.wait(0.03)
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-739.147522, 16.3198643, 231.56601, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-			task.wait(0.17)
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-441.247253, 24.021759, 411.503754, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-            task.wait(0.03)
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-439.762268, 16.3393345, 417.383698, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-			task.wait(0.17)
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-139.082031, 16.3098545, 237.155304, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-            task.wait(0.03)
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-139.147278, 24.021759, 238.203751, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-			task.wait(0.14)
-			prev = game:GetService("Players").LocalPlayer.Character:WaitForChild('HumanoidRootPart').CFrame
-			game:GetService("Players").LocalPlayer.Character.Parent = workspace.Terrain
-			game:GetService("Players").LocalPlayer.Character:BreakJoints()
-			game:GetService('Workspace'):WaitForChild(game:GetService("Players").LocalPlayer.Name)
-			game:GetService("Players").LocalPlayer.Character:WaitForChild('HumanoidRootPart').CFrame = prev
-		end
-	end
-	
-end)
-
   wait(3) --等待三秒
   --你的脚本
     else --验证失败执行↓
