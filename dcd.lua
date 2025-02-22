@@ -3398,22 +3398,6 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "信用",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "作者:北约"
-})
-
-Tab:AddButton({
-	Name = "复制作者QQ群",
-	Callback = function()
-     setclipboard("387466948")
-  	end
-})
-
-local Tab = Window:MakeTab({
 	Name = "中心脚本",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
