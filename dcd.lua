@@ -1674,6 +1674,7 @@ Tab:AddToggle({
    end
 })
 
+
   wait(3) --等待三秒
   --你的脚本
     else --验证失败执行↓
