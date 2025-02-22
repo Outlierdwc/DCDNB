@@ -1,8 +1,3 @@
-        if MoneyPrint1 then
-            MoneyPrint2()
-        end
-    end    
-})
 MoneyPrint2 = function()
     while MoneyPrint1 do
     wait(0.1)
