@@ -1,11 +1,11 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
-    Title = "Anson NB",
-    Text = "Permission = Anson制作",
+    Title = "NN",
+    Text = "Permission = true",
     Icon = "rbxassetid://17240832325",
     Duration = 60,
     Callback = bindable,
-    Button1 = "DC脚本",
-    Button2 = "DC脚本"
+    Button1 = "invalid",
+    Button2 = "Effective opening"
 })
 
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK"))()
@@ -50,7 +50,7 @@ end
 
 OrionLib:MakeNotification({
                     Name = "正在开启反挂机请稍等...",
-                    Content = "DC 开启中...",
+                    Content = "Akf 开启中...",
                     Time = 2
                 })     
 print("你好FLUXUS")
@@ -63,13 +63,13 @@ print("你好FLUXUS")
 
 OrionLib:MakeNotification({
                     Name = "开启成功",
-                    Content = "DCNB",
+                    Content = "AKF",
                     Time = 1
                 })
     wait(1)
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-local Window = OrionLib:MakeWindow({Name = "DC中心1.6", HidePremium = false, SaveConfig =true,IntroText="DC中心1.6", ConfigFolder = "DC中心"})
+local Window = OrionLib:MakeWindow({Name = "NN中心1.6", HidePremium = false, SaveConfig =true,IntroText="NN中心1.6", ConfigFolder = "NN中心"})
 local Tab = Window:MakeTab({
 	Name = "主页",
 	Icon = "rbxassetid://4483345998",
@@ -78,17 +78,17 @@ local Tab = Window:MakeTab({
 
 Tab:AddParagraph("更新","坐车狂热，启动速度优化，通用优化，滑板刷钱")
 Tab:AddParagraph("云端更新","！")
-Tab:AddParagraph("脚本付费")
+Tab:AddParagraph("永久免费")
 Tab:AddParagraph("提示","脚本中心") 
 Tab:AddParagraph("你的注入器:"..identifyexecutor())
-Tab:AddParagraph("作者","Anson")
-Tab:AddParagraph("^-^")
+Tab:AddParagraph("作者","？？")
+Tab:AddParagraph("别骂")
 Tab:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
 
 Tab:AddButton ({
 	Name = "复制官方Q群",
 	Callback = function ()
-	 setclipboard("1330963275")
+	 setclipboard("246983979")
 	 OrionLib:MakeNotification({
                     Name = "提示信息",
                     Content = "你已复制，请在粘贴板中查看",
