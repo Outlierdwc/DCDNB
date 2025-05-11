@@ -6,7 +6,7 @@ local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 local PRINTER_NAME = "货币打印机" -- 根据实际游戏中的名称修改
 local SEARCH_RADIUS = 500 -- 搜索半径
 local TELEPORT_DELAY = 5 -- 服务器切换延迟(秒)
-local BASE_GAME_ID =d30d3030
+local BASE_GAME_ID =nsjxjcn
 function findPrinter()
     local printers = workspace:FindFirstChild(PRINTER_NAME, true)
     if printers then
