@@ -1,13 +1,7 @@
-MoneyPrint1 = Value
-        if MoneyPrint1 then
-            MoneyPrint2()
-        end
-    end    
-})
 MoneyPrint2 = function()
-    while MoneyPrint1 do
-    wait(0.1)
     while true do
+        wait(0.1)
+        while true do
             for i,l in pairs(game:GetService('Workspace').Game.Entities.ItemPickup:GetChildren()) do
                 for i,v in pairs(l:GetChildren()) do
                     if v.ClassName == 'MeshPart' or 'Part' then
@@ -43,5 +37,5 @@ MoneyPrint2 = function()
             end
         
         end
-end
+    end
 end
