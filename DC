@@ -1,0 +1,143 @@
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "InvisibleJoystickUI"
+screenGui.Parent = player.PlayerGui
+local joystickZone = Instance.new("Frame")
+joystickZone.Name = "JoystickZone"
+joystickZone.Size = UDim2.new(0.3, 0, 0.5, 0)
+joystickZone.Position = UDim2.new(0, 0, 0.5, 0)
+joystickZone.AnchorPoint = Vector2.new(0, 0.5)
+joystickZone.BackgroundTransparency = 1
+joystickZone.BorderSizePixel = 0
+joystickZone.Parent = screenGui
+local autoForwardSpeed = 16
+local strafeSpeed = 10
+local currentStrafe = 0
+local isMoving = false
+local touchStartPos = nil
+local function onInputBegan(input, gameProcessed)
+    if gameProcessed then return end
+    
+    if input.UserInputType == Enum.UserInputType.Touch then
+        local inputPos = Vector2.new(input.Position.X, input.Position.Y)
+        local zonePos = joystickZone.AbsolutePosition
+        local zoneSize = joystickZone.AbsoluteSize
+        if inputPos.X >= zonePos.X and inputPos.X <= zonePos.X + zoneSize.X and
+           inputPos.Y >= zonePos.Y and inputPos.Y <= zonePos.Y + zoneSize.Y then
+            isMoving = true
+            touchStartPos = inputPos
+        end
+    end
+end
+local function onInputChanged(input, gameProcessed)
+    if not isMoving or input.UserInputType ~= Enum.UserInputType.Touch then return end
+    local currentPos = Vector2.new(input.Position.X, input.Position.Y)
+    if touchStartPos then
+        local deltaX = currentPos.X - touchStartPos.X
+        local maxDelta = joystickZone.AbsoluteSize.X / 2
+        currentStrafe = math.clamp(deltaX / maxDelta, -1, 1)
+    end
+end
+local function onInputEnded(input, gameProcessed)
+    if input.UserInputType == Enum.UserInputType.Touch then
+        isMoving = false
+        currentStrafe = 0
+        touchStartPos = nil
+    end
+end
+UserInputService.InputBegan:Connect(onInputBegan)
+UserInputService.InputChanged:Connect(onInputChanged)
+UserInputService.InputEnded:Connect(onInputEnded)
+RunService.Heartbeat:Connect(function()
+    local camera = workspace.CurrentCamera
+    local cameraCFrame = camera.CFrame
+    local forwardVector = Vector3.new(cameraCFrame.LookVector.X, 0, cameraCFrame.LookVector.Z).Unit
+    local rightVector = Vector3.new(cameraCFrame.RightVector.X, 0, cameraCFrame.RightVector.Z).Unit
+    local moveVector = forwardVector * autoForwardSpeed + rightVector * currentStrafe * strafeSpeed
+    humanoid:Move(moveVector, true)
+end)
+player.CharacterAdded:Connect(function(newCharacter)
+    character = newCharacter
+    humanoid = character:WaitForChild("Humanoid")
+    screenGui.Parent = player.PlayerGui
+end)
+        a = 1
+        b = 15
+        local startTime = tick()
+        local shouldExit = false
+        task.delay(2, function()
+            shouldExit = true
+        end)
+        while a <= b do
+Players = game:GetService("Players")
+LocalPlayer = Players.LocalPlayer
+HRP = "HumanoidRootPart"
+for i, v in pairs(workspace.Game.Entities.ItemPickup:GetChildren()) do
+    Prompt = v.PrimaryPart:FindFirstChildOfClass("ProximityPrompt")
+    if Prompt.ObjectText == "Money Printer" then
+        LocalPlayer.Character[HRP].CFrame = v.PrimaryPart.CFrame
+        wait()
+        fireproximityprompt(Prompt)
+    end
+end
+local function createUILibrary(text, imageId)
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = game:GetService("CoreGui")
+    
+    local mainFrame = Instance.new("Frame")
+    mainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    mainFrame.BackgroundTransparency = 0.3
+    mainFrame.Size = UDim2.new(0, 300, 0, 150)
+    mainFrame.Position = UDim2.new(0.5, -150, 0.8, -75)
+    mainFrame.Parent = screenGui
+    
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Text = text
+    textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    textLabel.TextSize = 16
+    textLabel.Font = Enum.Font.GothamBold
+    textLabel.BackgroundTransparency = 1
+    textLabel.Size = UDim2.new(1, 0, 0.4, 0)
+    textLabel.Parent = mainFrame
+    
+    local imageLabel = Instance.new("ImageLabel")
+    imageLabel.Image = "rbxassetid://"..imageId
+    imageLabel.Size = UDim2.new(0.7, 0, 0.5, 0)
+    imageLabel.Position = UDim2.new(0.15, 0, 0.4, 0)
+    imageLabel.BackgroundTransparency = 1
+    imageLabel.ScaleType = Enum.ScaleType.Fit
+    imageLabel.Parent = mainFrame
+    
+    return screenGui
+end
+local ui = createUILibrary('DC自动识别收集印钞机 | 即将自动换服务器', 1894267095)
+            a = a + 1
+        end
+    task.delay(math.max(0, 2 - (tick() - startTime)), function()
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+    local Raw = game:HttpGet(_servers.. ((cursor and "&cursor="..cursor) or ""))
+    return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+    local Servers = ListServers(Next)
+    local numServers = #Servers.data
+    if numServers > 0 then
+        local randomIndex = math.random(1, numServers)
+        Server = Servers.data[randomIndex] 
+    end
+    Next = Servers.nextPageCursor
+until Server
+TPS:TeleportToPlaceInstance(_place,Server.id,game:GetService('Players').LocalPlayer)
+    end)
