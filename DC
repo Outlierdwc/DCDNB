@@ -97,17 +97,25 @@ local function createUILibrary(text, imageId)
     mainFrame.Position = UDim2.new(0.5, 0, 0, 20)
     mainFrame.Parent = screenGui
     local UICorner = Instance.new("UICorner")
-UICorner.CornerRadius = UDim.new(0, 20) -- 圆角大小
-UICorner.Parent = mainFrame
-    
+    UICorner.CornerRadius = UDim.new(0, 20) -- 圆角大小
+    UICorner.Parent = mainFrame
+    local Stroke = Instance.new("UIStroke")
+    Stroke.Color = Color3.fromRGB(255, 215, 0)
+    Stroke.Thickness = 2
+    Stroke.Parent = mainFrame
+   
     local textLabel = Instance.new("TextLabel")
     textLabel.Text = text
-    textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    textLabel.TextColor3 = Color3.fromRGB(255, 240, 180)
     textLabel.TextSize = 16
     textLabel.Font = Enum.Font.GothamBold
     textLabel.BackgroundTransparency = 1
     textLabel.Size = UDim2.new(1, 0, 0.4, 0)
     textLabel.Parent = mainFrame
+    local TextStroke = Instance.new("UIStroke")
+    TextStroke.Color = Color3.fromRGB(255, 215, 0)
+    TextStroke.Thickness = 1.5
+    TextStroke.Parent = textLabel
     
     local imageLabel = Instance.new("ImageLabel")
     imageLabel.Image = "rbxassetid://"..imageId
