@@ -112,10 +112,6 @@ local function createUILibrary(text, imageId)
     textLabel.BackgroundTransparency = 1
     textLabel.Size = UDim2.new(1, 0, 0.4, 0)
     textLabel.Parent = mainFrame
-    local TextStroke = Instance.new("UIStroke")
-    TextStroke.Color = Color3.fromRGB(255, 215, 0)
-    TextStroke.Thickness = 1.5
-    TextStroke.Parent = textLabel
     
     local imageLabel = Instance.new("ImageLabel")
     imageLabel.Image = "rbxassetid://"..imageId
